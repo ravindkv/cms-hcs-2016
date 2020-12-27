@@ -1,0 +1,171 @@
+The physics objects of our interest are primary and secondary vertices, 
+lepton, jets, and missing transverse energy attributed to neutrino. The particle flow (PF) 
+algorithm~\cite{CMS-PAS-PFT-09-001,CMS-PAS-PFT-10-001} is used to 
+reconstruct these objects. In this chapter, we first list the collision data 
+and simulated Monte Carlo (MC) samples used for this analysis and then describe the 
+reconstruction process for the primary and secondary vertices, muon, electron, jets, and 
+\PQb tagging.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data samples}
+The reconstructed data is broadly divided into different event topologies. 
+Only those datasets matching with event topology under consideration are used 
+for this analysis. Such approach help in optimising the computing resources.
+The single muon and single electron data sample used for this analysis are 
+shown in Table~\ref{tab:dataSample}. The data was collected in 2016. 
+A luminosity mask is applied to select good quality data, where most of the 
+sub-detectors of the CMS operates in a normal condition. The integrated luminosity
+after applying the mask reduces marginally from 37.0\fbinv to 35.9\fbinv.
+
+\begin{table}
+\begin{center}
+\caption{Muon and electron data samples recorded in 2016 with an integrated 
+	luminosity 35.9\fbinv.} 
+\label{tab:dataSample}
+\begin{tabular}{ccc} \hline\hline                                                         {\bf{Dataset}} & {\bf{$L_{\rm{int}} (\fbinv)$}} & {\bf{Events}} \\\hline\hline
+\verb|SingleMuon|    & 35.86 & 786767595  \\[0.1cm]
+\verb|SingleElectron|& 35.86 & 937954379 \\\hline
+ \end{tabular}          
+\end{center}
+\end{table}
+
+\section{Simulated samples}
+The centrally produced official simulated samples are used in this analysis. 
+All the simulated samples  are shown in Table~\ref{tab:mcSample} with 
+corresponding cross section and number of events. The k-factor is the 
+ratio of cross sections from next-to-leading order and leading order, 
+k$_\rm{f} =\sigma_{\text{NLO}}/\sigma_{\text{LO}}$.
+
+The signal and background simulated samples are generated using \MGvATNLO~\cite{Alwall:2011uj, Alwall:2014hca}
+as well as \POWHEG~\cite{Frixione:2007vw, Nason:2004rx, Alioli:2010xd} generators at parton level. 
+These parton level events are hadronised using \PYTHIA~\cite{Sjostrand:2006za, Sjostrand:2007gs}. 
+The hadronised events were tuned using  CUETP8M1~\cite{CMS-PAS-TOP-16-021} which are then passed
+through \GEANTfour~\cite{Agostinelli:2002hh} for detector simulation. Finally, the events are
+reconstructed after complete detector simulation. 
+
+The \ttjets channel is the most significant irreducible background for this analysis. It
+contributes around 94\% of the total backgrounds in the signal region. The parton level events 
+for \ttjets samples of Table~\ref{tab:mcSample} are generated using 
+\POWHEG~\cite{Frixione:2007vw, Nason:2004rx, Alioli:2010xd} at next-to-leading (NLO) order. The 
+\verb|NNPDF30_nlo_as_0118| ~\cite{Ball:2014uwa} parton distribution function (PDF) was used 
+for this purpose. The partonic events were then hadronised using 
+\PYTHIA~\cite{Sjostrand:2006za, Sjostrand:2007gs}. To simulate this channel at higher orders and 
+to take care of non-perturbative effects, \ttjets samples were tuned with 
+CUETP8M1~\cite{CMS-PAS-TOP-16-021}. The NNLO cross section for \ttjets process is estimated to be 
+$831.76 \pm^{20}_{29}(\text{scale}) \pm 35 (\text{PDF} + \alpha_s)$ pb \cite{Beneke:2011mq}. 
+
+Single \PQt quark samples are shown in Table~\ref{tab:mcSample}, where a \PQt quark is produced with 
+jets in \PQt-channel (\verb|ST_t|), \PQs-channel (\verb|ST_s|), and \PQt\PW-channel (\verb|ST_tW|). The
+\verb|ST_tW| and \verb|ST_t| samples are produced using \POWHEG + \PYTHIA and CUETP8M1, where \verb|ST_tW| has 
+5-flavor scheme whereas \verb|ST_t|, has 4-flavor scheme and further, the \PQt quark decays 
+inclusively. The \verb|ST_s| are generated using \MGvATNLO~\cite{Alwall:2014hca} in the 4-flavor 
+scheme and was hadronised using \PYTHIA. The NLO cross section for single \PQt process 
+\cite{Aliev:2010zk, Kant:2014oha} are shown in Table~\ref{tab:mcSample}.
+
+The inclusive \wjets and \dyjets samples were generated using \MGvATNLO and are hadronised using 
+\PYTHIA. The MLM~\cite{ Alwall:2007fs} technique was used to take care of double counting of partons. There
+are exclusive \PW + n jets and $\PZ/\PGg$ + n jets samples available for n = 1, 2, 3, 4. 
+The inclusive (\wjets and \dyjets) and exclusive ($\PW/\PZ/\PGg$ + n jets) samples have our event 
+topology \ie 4 jets + 1 lepton + \MET. Therefore, the inclusive and exclusive samples are added 
+appropriately to have more statistics. To avoid double counting, the exclusive samples are normalized
+w.r.t the inclusive one. For example, the $\PW$ + 1 jet events are multiplied by 
+$1/(L_{\wjets} + L_{\PW + \text{1 jet}})$ and then are added linearly with that of \wjets. 
+Where $L_{\wjets}$ is the luminosity (number of events divided by the cross section) of \wjets sample. A similar procedure is followed to add $\PZ/\PGg$ + n jets with \dyjets. The NLO cross section for 
+these processes is shown in Table~\ref{tab:mcSample}.
+
+The vector boson pair production process (WW, WZ, and ZZ) samples are generated and hadronised 
+using \PYTHIA and are tuned using CUETP8M1. The NLO cross section for these samples are shown 
+in Table~\ref{tab:mcSample}.
+
+The muon (electron) enriched QCD multijet samples are used for \mujets (\ejets) channel. These 
+samples are generated using \PYTHIA and CUETP8M1. After multiplying with filter efficiency, the 
+NLO cross sections are shown in Table~\ref{tab:mcSample}. From this table, it can be seen that the 
+luminosity for these samples are significantly 
+smaller as compared to the observed luminosity and therefore, a data-driven approach is used to 
+make more precise estimation of QCD multijet background.
+
+The charged Higgs signal samples were generated using \MGvATNLO, and hadronized using \PYTHIA. The 
+signal sample for several mass points in the range of 80 to 160 \GeV (80, 90, 100, 120, 140, 150, 
+155, 160) are generated for the search for charged Higgs. The cross section 
+for the signal is 831.76$\times$ 0.2132 pb, where 831.76 \unit{pb} is the inclusive 
+(fully-hadronic, fully-leptonic, semi-leptonic) \ttjets production cross section and factor 
+0.2132 is the branching fraction of $W^-\to l^- \bar{\nu_l}$ (where $l = \mu, e$, $\tau$ is not 
+considered in this analysis) \cite{Beringer:1900zz}. The factor 0.2132 is multiplied because \ttbar decays 
+semi-leptonically ($(t\to H^+ b, H^+\to c\bar{s}), (\bar{t}\to W^-\bar{b}, W^- \to l^-\bar{\nu_l})$), 
+where $l = \mu, e$ in the charged Higgs signal samples. Furthermore, the signal events are scaled by 
+the maximum observed upper limit obtained at 8 \TeV. The upper observed limit on \brThb is 6.5\% for
+the $m_{H+}$ = 90 \GeV\cite{Khachatryan:2015uua}. Therefore, the signal samples are scaled by a factor 
+$2\times 0.065\times (1-0.065) = 0.12155$ in every plot and table except in the data cards used for 
+limit computation. 
+
+\begin{table}
+\caption{Background and signal simulated samples with corresponding cross section and the number of events.}
+\label{tab:mcSample}
+\begin{center}
+\begin{tabular}{cccc} \hline\hline
+    {\bf{Process}} & {\bf{$\sigma$}}  (pb) (Order) &{\bf{$k_\rm{f}$}}& {\bf{Events}}\\\hline
+\hline
+    \ttjets &$831.76^{+20}_{-29} \pm 35$ (NNLO) & - & 77081156 \\  
+    \verb|Single t (tW-channel)| &$71.7 \pm 1.80 \pm 3.40$ (NLO) & - &  6933094   \\
+    \verb|Single t (t-channel)|  &$80.95^{+5.8}_{-5.2} \pm 0.16$ (NLO) & -  & 38811017  \\ 
+    \verb|Single t (s-channel)|  &$10.32^{+0.6}_{0.5} \pm 0.01$ (NLO) & -  & 2989199  \\ \hline
+    \verb|W + jets|   &$50690 \pm 389.1$ (LO) & 1.21  & 29181900  \\
+    \verb|W + 1 jet|  &$9493 \pm 25.52$ (LO)      & 1.21  & 44813600  \\
+    \verb|W + 2 jets| &$3120 \pm 78.5$ (LO)   & 1.21  & 29878415  \\
+    \verb|W + 3 jets| &$942.3 \pm 36.8$ (LO)  & 1.21  & 19798117  \\
+    \verb|W + 4 jets| &$524.2 \pm 23.6$ (LO)  & 1.21  & 9170576  \\\hline
+
+    \verb|Drell-Yan + jets|  &$4895 \pm 41$ (LO)    & 1.17  & 48103700  \\
+    \verb|Drell-Yan + 1 jet| &$1016 \pm 16.8$ (LO)  & 1.17  & 62079400  \\
+    \verb|Drell-Yan + 2 jets|&$331.3\pm 8.5$ (LO)   & 1.17  & 19970551  \\
+    \verb|Drell-Yan + 3 jets|&$96.6 \pm 3.9$ (LO)   & 1.17  & 5856110  \\
+    \verb|Drell-Yan + 4 jets|&$51.4 \pm 2.5$ (LO)   & 1.17  & 4197868  \\ \hline
+
+    \verb|WW|  &$118.7^{+2.5}_{-2.2}$ (NNLO) & -   & 994012  \\ 
+    \verb|WZ|  &$46.74^{+1.9}_{1.5}$ (NLO)  & -  & 1000000 \\ 
+    \verb|ZZ|  &$17.72^{0.6}_{0.4}$ (NLO)  & -  & 990064  \\ \hline
+    \verb|QCD_Pt-15to20_MuEnriched|    & 3819570 (NLO) & -  & 4141251   \\
+    \verb|QCD_Pt-20to30_MuEnriched|    & 2960198 (NLO) & -  & 31475157  \\
+    \verb|QCD_Pt-30to50_MuEnriched|    & 1652471 (NLO) & -  & 29954815  \\
+    \verb|QCD_Pt-50to80_MuEnriched|    & 437504  (NLO) & -  & 19806915  \\
+    \verb|QCD_Pt-80to120_MuEnriched|   & 106033  (NLO) & -  & 13786971  \\
+    \verb|QCD_Pt-120to170_MuEnriched|  & 25190   (NLO) & -  & 8042721   \\
+    \verb|QCD_Pt-170to300_MuEnriched|  & 8654    (NLO) & -  & 7947159   \\
+    \verb|QCD_Pt-300to470_MuEnriched|  & 797     (NLO) & -  & 7937590   \\\hline
+    
+    \verb|QCD_Pt-15to20_EMEnriched|      & 254600  (NLO) & -  & 5652601    \\
+    \verb|QCD_Pt-20to30_EMEnriched|      & 5352960 (NLO) & -  & 9218954    \\
+    \verb|QCD_Pt-30to50_EMEnriched|      & 9928000 (NLO) & -  & 4730195    \\
+    \verb|QCD_Pt-50to80_EMEnriched|      & 2890800 (NLO) & -  & 22337070   \\
+    \verb|QCD_Pt-80to120_EMEnriched|     & 350000  (NLO) & -  & 35841783   \\
+    \verb|QCD_Pt-120to170_EMEnriched|    & 62964   (NLO) & -  & 35817281   \\
+    \verb|QCD_Pt-170to300_EMEnriched|    & 18810   (NLO) & -  & 11540163   \\
+    \verb|QCD_Pt-300toInf_EMEnriched|    & 1350    (NLO) & -  & 7373633    \\\hline
+    \verb|ChargedHiggsToCS_M080_To160|  & $0.2132 \times 831.76$ (NNLO) & - &1000000   
+    \\\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+In the \ttjets samples, the NLO matrix element parton shower matching is varied by the damping 
+parameter ($h_\text{damp}$). Additional $\ttjets$ samples are generated by varying 
+$h_\text{damp}$ up and down and are used to observe the effect of $h_\text{damp}$. Similarly, 
+$\ttjets$ samples where the renormalization and factorisation scales have been varied up 
+and down are used to evaluate the uncertainties due to these scales. Also, alternate \ttjets 
+samples with \mt = 171.5 and 173.5\GeV are considered to observe the effect of mass of the \PQt quark. 
+All the additional \ttjets samples used for systematics study are shown in Table~\ref{tab:mcSampleSys}. 
+\begin{table}
+\caption{ The SM \ttjets samples used for systematics study.}
+\label{tab:mcSampleSys}
+\begin{center}
+\begin{tabular}{ccc} \hline\hline
+    {\bf{Process}} & {\bf{$\sigma$}} (pb) & {\bf{Events}}\\\hline\hline
+	\ttjets , scale up           		&  730 & 29310620 \\
+	\ttjets , scale down         		&  730 & 28354188 \\
+	\ttjets , \mt = 173.5 \GeV           &  711 & 19419050 \\
+	\ttjets , \mt = 171.5 \GeV           &  750 & 19578812 \\
+	\ttjets , $h_\text{damp}$ up     	&  750 & 29689380 \\
+	\ttjets , $h_\text{damp}$ down    	&  750 & 29117820\\\hline
+\end{tabular}
+\end{center}
+\end{table}

@@ -1,0 +1,168 @@
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/DY1JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+DY1JetsToLL                     [{"file_size":1976077585765,"nblocks":199,"nevents":62627174,"nfiles":986,"nlumis":316059,"num_block":199,"num_event":62627174,"num_file":986,"num_lumi":316059}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/DY2JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+DY2JetsToLL                     [{"file_size":678862189624,"nblocks":40,"nevents":19970551,"nfiles":291,"nlumis":100052,"num_block":40,"num_event":19970551,"num_file":291,"num_lumi":100052}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/DY3JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+DY3JetsToLL                     [{"file_size":214250973292,"nblocks":56,"nevents":5856110,"nfiles":133,"nlumis":29086,"num_block":56,"num_event":5856110,"num_file":133,"num_lumi":29086}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/DY4JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+DY4JetsToLL                     [{"file_size":170191766959,"nblocks":3,"nevents":4197868,"nfiles":59,"nlumis":30869,"num_block":3,"num_event":4197868,"num_file":59,"num_lumi":30869}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v2/MINIAODSIM"
+DYJetsToLL                      [{"file_size":1464680608482,"nblocks":36,"nevents":49144274,"nfiles":477,"nlumis":710475,"num_block":36,"num_event":49144274,"num_file":477,"num_lumi":710475}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/ChargedHiggsToCS_M100_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+HplusM100                       [{"file_size":44774791607,"nblocks":26,"nevents":996170,"nfiles":59,"nlumis":5202,"num_block":26,"num_event":996170,"num_file":59,"num_lumi":5202}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/ChargedHiggsToCS_M120_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+HplusM120                       [{"file_size":44930524737,"nblocks":29,"nevents":994498,"nfiles":55,"nlumis":5062,"num_block":29,"num_event":994498,"num_file":55,"num_lumi":5062}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/ChargedHiggsToCS_M140_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+HplusM140                       [{"file_size":44076277880,"nblocks":26,"nevents":987730,"nfiles":44,"nlumis":6038,"num_block":26,"num_event":987730,"num_file":44,"num_lumi":6038}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/ChargedHiggsToCS_M150_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+HplusM150                       [{"file_size":43973938956,"nblocks":26,"nevents":990645,"nfiles":48,"nlumis":5453,"num_block":26,"num_event":990645,"num_file":48,"num_lumi":5453}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/ChargedHiggsToCS_M155_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+HplusM155                       [{"file_size":42070666091,"nblocks":28,"nevents":952984,"nfiles":54,"nlumis":4966,"num_block":28,"num_event":952984,"num_file":54,"num_lumi":4966}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/ChargedHiggsToCS_M160_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+HplusM160                       [{"file_size":43490030930,"nblocks":25,"nevents":992264,"nfiles":56,"nlumis":5169,"num_block":25,"num_event":992264,"num_file":56,"num_lumi":5169}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/ChargedHiggsToCS_M080_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+HplusM80                        [{"file_size":43726063280,"nblocks":23,"nevents":976710,"nfiles":59,"nlumis":5888,"num_block":23,"num_event":976710,"num_file":59,"num_lumi":5888}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/ChargedHiggsToCS_M090_13TeV-madgraph/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+HplusM90                        [{"file_size":43973435217,"nblocks":27,"nevents":988480,"nfiles":60,"nlumis":5149,"num_block":27,"num_event":988480,"num_file":60,"num_lumi":5149}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/QCD_Pt-120to170_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+QCD_Pt-120to170_Mu              [{"file_size":313222341348,"nblocks":6,"nevents":8042721,"nfiles":89,"nlumis":42530,"num_block":6,"num_event":8042721,"num_file":89,"num_lumi":42530}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/QCD_Pt-15to20_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+QCD_Pt-15to20_Mu                [{"file_size":114798652074,"nblocks":7,"nevents":4141251,"nfiles":44,"nlumis":26062,"num_block":7,"num_event":4141251,"num_file":44,"num_lumi":26062}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/QCD_Pt-170to300_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+QCD_Pt-170to300_Mu              [{"file_size":339781972733,"nblocks":6,"nevents":7947159,"nfiles":106,"nlumis":48211,"num_block":6,"num_event":7947159,"num_file":106,"num_lumi":48211}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/QCD_Pt-20to30_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+QCD_Pt-20to30_Mu                [{"file_size":896514544269,"nblocks":28,"nevents":31475157,"nfiles":303,"nlumis":200832,"num_block":28,"num_event":31475157,"num_file":303,"num_lumi":200832}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/QCD_Pt-300to470_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+QCD_Pt-300to470_Mu              [{"file_size":376294747731,"nblocks":17,"nevents":7937590,"nfiles":133,"nlumis":71486,"num_block":17,"num_event":7937590,"num_file":133,"num_lumi":71486}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/QCD_Pt-30to50_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+QCD_Pt-30to50_Mu                [{"file_size":901959914983,"nblocks":28,"nevents":29954815,"nfiles":302,"nlumis":193648,"num_block":28,"num_event":29954815,"num_file":302,"num_lumi":193648}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/QCD_Pt-50to80_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+QCD_Pt-50to80_Mu                [{"file_size":646502244303,"nblocks":15,"nevents":19806915,"nfiles":192,"nlumis":109123,"num_block":15,"num_event":19806915,"num_file":192,"num_lumi":109123}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/QCD_Pt-80to120_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+QCD_Pt-80to120_Mu               [{"file_size":492478276477,"nblocks":11,"nevents":13786971,"nfiles":146,"nlumis":120764,"num_block":11,"num_event":13786971,"num_file":146,"num_lumi":120764}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/ST_s-channel_4f_InclusiveDecays_13TeV-amcatnlo-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+ST_s                            [{"file_size":105440003459,"nblocks":3,"nevents":2989199,"nfiles":37,"nlumis":14946,"num_block":3,"num_event":2989199,"num_file":37,"num_lumi":14946}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/ST_t-channel_antitop_4f_inclusiveDecays_13TeV-powhegV2-madspin-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+ST_t                            [{"file_size":1410982422127,"nblocks":24,"nevents":38811017,"nfiles":406,"nlumis":203542,"num_block":24,"num_event":38811017,"num_file":406,"num_lumi":203542}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6_ext1-v1/MINIAODSIM"
+ST_tW                           [{"file_size":269982644061,"nblocks":40,"nevents":6933094,"nfiles":144,"nlumis":44636,"num_block":40,"num_event":6933094,"num_file":144,"num_lumi":44636}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/TTJets_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+TTJetsM                         [{"file_size":448128897430,"nblocks":61,"nevents":10139950,"nfiles":197,"nlumis":63190,"num_block":61,"num_event":10139950,"num_file":197,"num_lumi":63190}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/TT_TuneCUETP8M2T4_13TeV-powheg-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+TTJetsP                         [{"file_size":3403800067777,"nblocks":54,"nevents":77081156,"nfiles":982,"nlumis":481156,"num_block":54,"num_event":77081156,"num_file":982,"num_lumi":481156}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/TT_TuneCUETP8M2T4down_13TeV-powheg-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+TTJetsP_down                    [{"file_size":1245938280957,"nblocks":27,"nevents":28354188,"nfiles":404,"nlumis":150023,"num_block":27,"num_event":28354188,"num_file":404,"num_lumi":150023}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/TT_hdampDOWN_TuneCUETP8M2T4_13TeV-powheg-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+TTJetsP_hdampDOWN               [{"file_size":1286664342983,"nblocks":54,"nevents":29117820,"nfiles":555,"nlumis":151392,"num_block":54,"num_event":29117820,"num_file":555,"num_lumi":151392}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/TT_hdampUP_TuneCUETP8M2T4_13TeV-powheg-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+TTJetsP_hdampUP                 [{"file_size":1319845572910,"nblocks":59,"nevents":29689380,"nfiles":599,"nlumis":177781,"num_block":59,"num_event":29689380,"num_file":599,"num_lumi":177781}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/TT_TuneCUETP8M2T4_mtop1715_13TeV-powheg-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+TTJetsP_mtop1715                [{"file_size":863107277082,"nblocks":77,"nevents":19578812,"nfiles":385,"nlumis":129662,"num_block":77,"num_event":19578812,"num_file":385,"num_lumi":129662}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/TT_TuneCUETP8M2T4_mtop1735_13TeV-powheg-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+TTJetsP_mtop1735                [{"file_size":857443701428,"nblocks":53,"nevents":19419050,"nfiles":321,"nlumis":105923,"num_block":53,"num_event":19419050,"num_file":321,"num_lumi":105923}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/TT_TuneCUETP8M2T4up_13TeV-powheg-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+TTJetsP_up                      [{"file_size":1297561787660,"nblocks":17,"nevents":29310620,"nfiles":382,"nlumis":165908,"num_block":17,"num_event":29310620,"num_file":382,"num_lumi":165908}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/W1JetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+W1JetsToLNu                     [{"file_size":1297946863384,"nblocks":146,"nevents":45367044,"nfiles":651,"nlumis":223899,"num_block":146,"num_event":45367044,"num_file":651,"num_lumi":223899}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/W2JetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+W2JetsToLNu                     [{"file_size":922124426257,"nblocks":182,"nevents":29878415,"nfiles":596,"nlumis":148500,"num_block":182,"num_event":29878415,"num_file":596,"num_lumi":148500}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/W3JetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+W3JetsToLNu                     [{"file_size":654899381207,"nblocks":102,"nevents":19798117,"nfiles":331,"nlumis":128701,"num_block":102,"num_event":19798117,"num_file":331,"num_lumi":128701}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/W4JetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+W4JetsToLNu                     [{"file_size":343116116192,"nblocks":73,"nevents":9170576,"nfiles":197,"nlumis":50209,"num_block":73,"num_event":9170576,"num_file":197,"num_lumi":50209}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+WJetsToLNu                      [{"file_size":812117052261,"nblocks":104,"nevents":29705748,"nfiles":422,"nlumis":149804,"num_block":104,"num_event":29705748,"num_file":422,"num_lumi":149804}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/WW_TuneCUETP8M1_13TeV-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+WW                              [{"file_size":30760233265,"nblocks":1,"nevents":994012,"nfiles":11,"nlumis":4981,"num_block":1,"num_event":994012,"num_file":11,"num_lumi":4981}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/WZ_TuneCUETP8M1_13TeV-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+WZ                              [{"file_size":31315770494,"nblocks":18,"nevents":1000000,"nfiles":30,"nlumis":5209,"num_block":18,"num_event":1000000,"num_file":30,"num_lumi":5209}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/ZZ_TuneCUETP8M1_13TeV-pythia8/RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v6-v1/MINIAODSIM"
+ZZ                              [{"file_size":30900979887,"nblocks":2,"nevents":990064,"nfiles":12,"nlumis":5381,"num_block":2,"num_event":990064,"num_file":12,"num_lumi":5381}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleMuon/Run2016B-03Feb2017_ver2-v2/MINIAOD"
+MuRunB2v2                       [{"file_size":3565976572799,"nblocks":92,"nevents":158145722,"nfiles":972,"nlumis":58962,"num_block":92,"num_event":158145722,"num_file":972,"num_lumi":58962}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleMuon/Run2016C-03Feb2017-v1/MINIAOD"
+MuRunCv1                        [{"file_size":1627146189658,"nblocks":37,"nevents":67441308,"nfiles":425,"nlumis":18611,"num_block":37,"num_event":67441308,"num_file":425,"num_lumi":18611}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleMuon/Run2016D-03Feb2017-v1/MINIAOD"
+MuRunDv1                        [{"file_size":2331123390717,"nblocks":54,"nevents":98017996,"nfiles":684,"nlumis":30072,"num_block":54,"num_event":98017996,"num_file":684,"num_lumi":30072}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleMuon/Run2016E-03Feb2017-v1/MINIAOD"
+MuRunEv1                        [{"file_size":2295417986768,"nblocks":49,"nevents":90963495,"nfiles":637,"nlumis":26865,"num_block":49,"num_event":90963495,"num_file":637,"num_lumi":26865}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleMuon/Run2016F-03Feb2017-v1/MINIAOD"
+MuRunFv1                        [{"file_size":1687891193151,"nblocks":39,"nevents":65489554,"nfiles":456,"nlumis":19204,"num_block":39,"num_event":65489554,"num_file":456,"num_lumi":19204}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleMuon/Run2016G-03Feb2017-v1/MINIAOD"
+MuRunGv1                        [{"file_size":3866405681706,"nblocks":91,"nevents":149916849,"nfiles":1083,"nlumis":45788,"num_block":91,"num_event":149916849,"num_file":1083,"num_lumi":45788}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleMuon/Run2016H-03Feb2017_ver2-v1/MINIAOD"
+MuRunH2v1                       [{"file_size":4454890062640,"nblocks":95,"nevents":169642135,"nfiles":1201,"nlumis":50502,"num_block":95,"num_event":169642135,"num_file":1201,"num_lumi":50502}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleMuon/Run2016H-03Feb2017_ver3-v1/MINIAOD"
+MuRunH3v1                       [{"file_size":109559816656,"nblocks":4,"nevents":4393029,"nfiles":30,"nlumis":1241,"num_block":4,"num_event":4393029,"num_file":30,"num_lumi":1241}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleElectron/Run2016B-03Feb2017_ver2-v2/MINIAOD"
+EleRunBver2v2                   [{"file_size":7616198621329,"nblocks":128,"nevents":246440440,"nfiles":1948,"nlumis":59819,"num_block":128,"num_event":246440440,"num_file":1948,"num_lumi":59819}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleElectron/Run2016C-03Feb2017-v1/MINIAOD"
+EleRunCv1                       [{"file_size":3189237008364,"nblocks":52,"nevents":97259854,"nfiles":814,"nlumis":18769,"num_block":52,"num_event":97259854,"num_file":814,"num_lumi":18769}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleElectron/Run2016D-03Feb2017-v1/MINIAOD"
+EleRunDv1                       [{"file_size":4764736452915,"nblocks":79,"nevents":148167727,"nfiles":1261,"nlumis":30238,"num_block":79,"num_event":148167727,"num_file":1261,"num_lumi":30238}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleElectron/Run2016E-03Feb2017-v1/MINIAOD"
+EleRunEv1                       [{"file_size":3926296928345,"nblocks":61,"nevents":117321545,"nfiles":1008,"nlumis":27153,"num_block":61,"num_event":117321545,"num_file":1008,"num_lumi":27153}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleElectron/Run2016F-03Feb2017-v1/MINIAOD"
+EleRunFv1                       [{"file_size":2362065804932,"nblocks":43,"nevents":70593532,"nfiles":721,"nlumis":19441,"num_block":43,"num_event":70593532,"num_file":721,"num_lumi":19441}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleElectron/Run2016G-03Feb2017-v1/MINIAOD"
+EleRunGv1                       [{"file_size":5219428390012,"nblocks":80,"nevents":153330123,"nfiles":1317,"nlumis":46306,"num_block":80,"num_event":153330123,"num_file":1317,"num_lumi":46306}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleElectron/Run2016H-03Feb2017_ver2-v1/MINIAOD"
+EleRunHver2v1                   [{"file_size":4366917222927,"nblocks":67,"nevents":125826667,"nfiles":1149,"nlumis":51328,"num_block":67,"num_event":125826667,"num_file":1149,"num_lumi":51328}]
+
+[01;32mExcecuting: [00m dasgoclient --limit=1 --query="summary dataset=/SingleElectron/Run2016H-03Feb2017_ver3-v1/MINIAOD"
+EleRunHver3v1                   [{"file_size":105665597567,"nblocks":2,"nevents":3191585,"nfiles":27,"nlumis":1233,"num_block":2,"num_event":3191585,"num_file":27,"num_lumi":1233}]
+

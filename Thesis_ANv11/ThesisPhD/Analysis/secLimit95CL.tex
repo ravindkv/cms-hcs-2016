@@ -1,0 +1,119 @@
+
+\section{95\% CL upper limit on \brThb} 
+\label{s:secLimit}
+The event yields from different event categories with systematics and statistical
+uncertainties are shown in Tables~\ref{tab:eventYieldInc}, \ref{tab:eventYieldCTagInc}, 
+and \ref{tab:eventYieldCTagEx} for \mujets and \ejets channel. From these tables, it can 
+be seen that the total background event matches well with the data within the uncertainties. 
+From Figures~\ref{fig:mjjBTagKinFit}, \ref{fig:mjj_cTagL}, and \ref{fig:mjj_cTagEx} it can
+be seen that no excess has been observed for the mass of charged Higgs in the range
+80 to 160 \GeV. In view of this, an exclusion limit at 95\% CL~\cite{Junk:1999kv} 
+using profile likelihood ratio has been put on the \brThb, assuming \brHcs = 100\%.
+The absence or presence of charged Higgs in the data is characterized by the exclusion limits. 
+Less is the value of limit, the more is the possibility of the absence of charged Higgs signal 
+and vice-versa.
+
+However, the procedure for setting the upper limit is not straight-forward as it involves many 
+mathematical techniques and intensive computing resources as there are so many bins of the $\mjj$ 
+distributions, statistical and systematics uncertainties, etc. A detailed mathematical description
+of the limit setting procedure is given in \cite{Cowan:2010js}. A precise description of it can be 
+found in Chapter 2 and 5 of \cite{ATLAS:2011tau}. Since there are good literature how the 95\%
+CL limit is calculated, we do not discuss mathematical details about it in this thesis. The only thing
+that is specific to this analysis is setting the limit on \brThb rather than on the signal strength.
+For this, the signal and background yield that goes in to the likelihood is scaled appropriately.
+For example, denoting x as the branching ratio of \PQt quark decaying to charged Higgs and a bottom 
+quark
+\begin{equation}
+\rm{x} = \brThb ,
+\end{equation}
+the different yields are scaled as
+\begin{equation}
+x^2\rm{N}^{\rm{HH}} + 2x(1-x)\rm{N}^{\rm{HW}} + (1-x)^{2}\rm{N}^{\rm{WW}}_{\ttjets} + \rm{N}_{\rm{other bkg}} ,
+\label{eq:deltaN}
+\end{equation}
+where we have assumed that \brThb + \brTwb = 1. The $\rm{N}^{\rm{HW}}$, $\rm{N}^{\rm{WW}}_{\ttjets}$, 
+and $\rm{N}_{\rm{other bkg}}$ is the number of events from 
+simulated signal, SM \ttjets, and other background process as shown in Table~\ref{tab:eventYieldCTagEx}
+from exclusive categories for \mujets and \ejets channel.
+The contribution of $\rm{N}^{\rm{HH}}$ is very small, hence this process is not considered in this
+analysis. The Higgs combine tool package is used to compute asymptotic limit on \rm{x} using the 
+CLs method~\cite{Junk:1999kv}. Since the signal search region lies in the range 80 to 160 \GeV of 
+$\mjj$, a $20 \geq \mjj \geq 170$ cut is used to avoid low statistical bins for further 
+analysis. The limits are computed for each event category described in Chapter~\ref{c:secMassReco}. 
+
+
+
+%\section{95\% CL limits}
+%In the absence of any excess in the data over background, an exclusion upper 
+%limit is set on the branching ratio of top-quark decaying to the charged Higgs
+%and a b-quark. The procedure for setting the upper limit is not straight-forward
+%as it involves many mathematical techniques and intensive computing ressources due
+%to so many bins of the $\mjj$ distributions, statistical and systematics 
+%uncertainties, etc. In this thesis, we briefly discuss the mathematical details 
+%of the procedure starting from a very simple counting experiment without 
+%considering any uncertainty. After that, we will genralise the procedure for a 
+%shape analysis (where there are multiple bins) and discuss how the statistical 
+%and systematics uncertainties are incorporated. Finally, we will discuss how a 
+%physics model is included to set the upper limit on a specific parameter of 
+%interest.
+%
+%\subsection{For a counting experiment}
+%A simple counting experiment is one where we have final event yields in the signal
+%region after applying a set of cuts. Let us denote the yields by $N_{obs}$, 
+%$N_{sig}$, and $N_{bkg}$ for data, simulated signal, and simulated background
+%process, respectively. The starting point to compute the limit is to construct
+%a liklehood function and then the test stastics which is the negative log of
+%liklehood functions. There is a free parameter (denoted by $r$) in the liklehood 
+%function which represents the signal strength. For example, $r$ = 0 implise the
+%background-only hyposthesis ($H_{bkg}$) , that is, the observed data is consistent 
+%with the background prediction. However, the non-zero value of $r$ corresponds to 
+%the signal + background hyposthesis ($H_{sig+bkg}$) . The upper limit on $r$ is set
+%based on these two hyposthesises. The liklehood function is constructed by asuming
+%that the $N_{obs}$ followes a poisson distribution where the rate is given by 
+%$N_{sig} + N_{bkg}$ for $H_{sig+bkg}$, and $N_{bkg}$ for $H_{bkg}$. For a 
+%simple signal model where the signal yield is linearly scaled by $r$ and the 
+%background yield is not scaled, we can rewrite the different event yields as
+%followes
+%\begin{equation}
+%	N_{obs} = n, ~N_{sig} = rs, ~ N_{bkg} = b
+%\end{equation}
+%The liklehood function is given by 
+%for GOF. The test statistics as a measure of GOF is given as \cite{Baker:1983tu}
+%\begin{equation}
+%q_{GoF, saturated} = -2\ln \left(\frac{L_{nominal} (n|\mu s(\theta) + b(\theta))}{L_{saturated}(n|n)}\right)
+%\label{eq:gof}
+%\end{equation}
+%
+%The likelihood functions of Eq.~\ref{eq:gof} are given by
+%\begin{equation}
+%L_{nominal} (n|\mu s(\theta) + b(\theta)) = \prod_{j=1}^N \frac{(\mu s_j(\theta) + b_j(\theta))^{n_j}}{n_{j}!} \exp(-(\mu s_j(\theta) + b_j(\theta)))
+%\label{eq:lNominal}
+%\end{equation}
+%and,
+%\begin{equation}
+%L_{saturated} (n|n) = \prod_{j=1}^N \frac{(n_j)^{n_j}}{n_{j}!} \exp(-n_j)
+%\label{eq:lSaturated}
+%\end{equation}
+%
+%
+%Where, $n_j$ is the expectation value in $j^{th}$ bin of data, N is the total number of bins. The
+%$s_j(\theta)$ and $b_j(\theta)$ are mean number of events in $j^{th}$ bin of signal and background
+%process and depend on the nuisance parameters ($\theta$). The $\mu$ is the signal strength which is
+%zero for background only hypothesis and non-zero for signal+background hypothesis. In $j^{th}$ bin,
+%$s_j(\theta)$ and $b_j(\theta)$ are given by \cite{Cowan:2010js}
+%
+%\begin{equation}
+%s_{j}(\theta) = s_{tot}\int_{j^{th} bin} f_s(x; \theta_s)dx,
+%\end{equation}
+%
+%\begin{equation}
+%b_{j}(\theta) = b_{tot}\int_{j^{th} bin} f_b(x; \theta_b)dx.
+%\end{equation}
+%The $f_s(x; \theta_s)$ and $f_b(x; \theta_b)$ are PDFs for signal and background events. 
+%The $s_{tot}$ and $b_{tot}$ are mean of total number of events from signal and background process.
+%
+%
+%\subsection{For a shape analysis}
+%\subsection{Incorporating uncertainties}
+%\subsection{Combining different channels}
+%\subsection{Incorporating a physics model}

@@ -1,0 +1,7 @@
+['MUON MC:', '/cms/store/user/rverma/NTuple_HIG-18-021_20200326_MuMC/MuMC_20200326/ST_sChannel_incl_MuMC_20200326/ST_s-channel_4f_InclusiveDecays_13TeV-amcatnlo-pythia8/ST_sChannel_incl_MuMC_20200326', '/cms/store/user/rverma/NTuple_HIG-18-021_20200326_MuMC/MuMC_20200326/ST_tChannel_antitop_MuMC_20200326/ST_t-channel_antitop_4f_inclusiveDecays_13TeV-powhegV2-madspin-pythia8_TuneCUETP8M1/ST_tChannel_antitop_MuMC_20200326', '/cms/store/user/rverma/NTuple_HIG-18-021_20200326_MuMC/MuMC_20200326/ST_tChannel_top_MuMC_20200326/ST_t-channel_top_4f_inclusiveDecays_13TeV-powhegV2-madspin-pythia8_TuneCUETP8M1/ST_tChannel_top_MuMC_20200326', '/cms/store/user/rverma/NTuple_HIG-18-021_20200326_MuMC/MuMC_20200326/ST_tWChannel_antitop_MuMC_20200326/ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1/ST_tWChannel_antitop_MuMC_20200326', '/cms/store/user/rverma/NTuple_HIG-18-021_20200326_MuMC/MuMC_20200326/ST_tWChannel_top_MuMC_20200326/ST_tW_top_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1/ST_tWChannel_top_MuMC_20200326'],
+
+['MUON DATA:'],
+
+['ELECTRON MC:'],
+
+['ELECTRON DATA:']

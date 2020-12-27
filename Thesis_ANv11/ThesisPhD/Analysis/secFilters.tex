@@ -1,0 +1,78 @@
+A series of filters~\cite{metFilters} are applied to
+filter \dq{bad} events, such as those where there is a huge difference in the \pt of
+muon measured from the tracker and the muon chambers. Although the occurrence of such
+\dq{bad} events is rare, these filters are applied as sanity measures. These
+filters mostly affect the actual data, most of them have no effect on the simulated
+events. The efficiency of all combined filters is 99.4\% for data, and 99.9\%
+for simulated \ttjets sample. These filters are particularly useful in those
+analyses where there is a requirement of very high \MET and the final event yield is 
+small. The list of filters with their availability and applicability is shown
+in Table~\ref{tab:eventFilters}. A detailed description of each filter is given below:
+\begin{itemize}[leftmargin=*]
+	\item \textbf{HBHE noise filter}: It is known that the barrel and endcap
+		part of the HCAL records noise (sporadic anomalous signals) at a
+		fixed rate even if there is no stable beam for physics data taking
+        \cite{metFilters}. Such an event is filtered.
+	\item \textbf{HBHE isolated noise filter}: This filter first finds the
+		candidates for rechits and rejects the event if the sum of
+		iso-tagged energy is $>$ 50 \GeV, the sum of iso-tagged transverse
+		energy $>$ 25 \GeV, and the number of iso-tagged rechits is $>$ 9.
+ 	\item \textbf{CSC beam halo filter}: The actual physics objects of interest
+		are those which are produced in the proton-proton collisions. However, there
+		are machine induced particles, produced through beam-gas or
+		beam-pipe interactions, which fly with the beam at a large radius
+		(up to 5\unit{m}). These machine induced particles are reconstructed mainly
+		in the cathode strip chambers (CSC) as muon candidate. An event is
+		filtered if such particles are present.
+	\item \textbf{Primary vertex filter}: The events are required to have
+		at least one good primary vertex. Therefore, those events are
+		filtered where there is no good vertex. A good vertex is
+		required to be real, the z-component of the position is $ <$ 24\unit{cm},
+		the $\rho$ component of the position is $<$ 2\unit{cm}, and the minimum
+		number of degrees of freedom is $>$ 4.
+	\item \textbf{Bad EE supercrystal filter}: The events are filtered if
+		there is an unusually large energy deposit in the four superclusters
+        of ECAL endcaps \cite{metFilters}. This filter is applied only on data.
+	\item \textbf{ECAL dead cell trigger primitive filter}: If the energy of
+		the ECAL crystals are estimated from the trigger primitive and
+		lies near the saturation energy then that event is filtered
+		\cite{metFilters}.
+	\item \textbf{Bad PF muon filter}: An event is filtered if the muon is
+		although qualified as a PF muon but the quality is very low, and
+		the \pt is large. The events are filtered if a muon is found
+		which has \pt $>$ 100 \GeV, segment compatibility $< 0.3$ or relative
+		percentage error in the \pt of the best (inner) track is more than
+		200\% (100\%), and $\Delta \rm R$ (muon, PF muon) $< 0.001$.
+	\item \textbf{Bad charged hadron filter}: Those events are filtered where
+		the quality of the muon is low and it is not declared as PF muon.
+		However, this non-PF muon is used in the calculation of PF-\MET
+		as a candidate for charged hadron. To reject such events, the muon
+		is required to have same \pt, segment compatibility, and error in
+		track cuts as that of the above filter. An additional requirement
+    of $\Delta \rm R$ (muon, charge hadron) $<$ 0.00001, and \verb|PtDiffRell|
+		$< 0.00001$ is applied where \verb|PtDiffRell| =
+		(\pt of PF candidate - \pt of muon inner track)/
+		(0.5$\times$ (\pt of PF candidate + \pt of muon inner track)).
+\end{itemize}
+
+\begin{table}
+\caption{ List of event filters applied to data and simulated samples. Most of the filters
+	are available in the MINIAOD dataset through the trigger collection. The
+	unavailable filters are applied on the fly using EDFilters.}
+\label{tab:eventFilters}
+\centering
+\begin{adjustbox}{max width=\textwidth}
+ \begin{tabular}{ccc}\hline\hline
+  {\bf{Name of the filter}} & {\bf{Available in MINIAOD}} & {\bf{Applied on}}\\\hline\hline
+  \verb|HBHE noise filter|            & Yes & Data \& Simulation \\
+  \verb|HBHE isolated noise filter|   & Yes & Data \& Simulation \\
+  \verb|CSC beam halo filter|         & Yes & Data \& Simulation \\
+  \verb|Good primary vertex filter|   & Yes & Data \& Simulation \\
+  \verb|Bad EE supercrystal filter|   & Yes & Data  \\
+  \verb|ECAL dead cell trigger primitive filter| & Yes & Data \& Simulation\\
+  \verb|Bad PF Muon Filter|  & No & Data \& Simulation \\
+  \verb|Bad Charged Hadron Filter|        & No & Data \& Simulation \\\hline
+ \end{tabular}
+\end{adjustbox}
+\end{table}
+

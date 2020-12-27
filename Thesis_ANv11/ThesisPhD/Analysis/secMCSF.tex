@@ -1,0 +1,121 @@
+\section{Luminosity scale factors}
+\label{s:lumi_sf}
+
+The simulated events listed in Table~\ref{tab:mcSample} are arbitrarily generated.
+While comparing distributions obtained using simulated events with that of data, 
+the former has to be normalised with the integrated luminosity of data.
+To achieve this, each simulated sample is multiplied by the following luminosity scale 
+factor ($\rm{SF}_{L}$):
+\begin{equation}
+\rm{SF}_{L}=\frac{L_{\rm {data}}}{L_{\rm {simulation}}} = \frac{L_{\rm {data}}\times\sigma_{\rm {simulation}}}{N_{\rm {simulation}}},
+\label{eq:lumiSF}
+\end{equation}
+where $L_{\rm data}$ = 35.9\fbinv and $N_{\rm {simulation}}$ is the number of 
+simulated events and $\sigma_{\rm {simulation}}$ is the corresponding cross section for 
+the given sample. As can be seen from Table~\ref{tab:mcSample}, the $\rm{SF}_{L}$ value is less 
+than 1 for most of the background samples except for QCD multijet. For QCD multijet samples, 
+it is very large compared to other backgrounds owing to less number of generated events compared 
+to its cross section. Simulation of large number of QCD multijet events is not feasible because of 
+computing limitations.  
+
+\section{Pileup reweighting}
+\label{s:pileup_reweighting}
+The pileup distributions in the data and simulation are different. To have the
+same pileup distribution, the simulated events are reweighted. Depending on 
+the number of primary vertices, the simulated event is multiplied by corresponding 
+pileup weight. The pileup weights are the ratio of pileup distributions from 
+data and simulation. 
+
+\section{Lepton scale factors}
+\label{s:lepton_sf}
+Trigger, tracking, isolation and identification efficiencies are different between simulation and data.
+A $\pt$ and $\eta$ dependent scale factors are applied to simulated events to take care of this 
+difference. The muon scale factors are era dependent. There are different muon scale factors for era 
+BCDEF and GH. However, electron scale factors are the same for full 2016 data taking period.
+Separate scale factors are combined into one as
+\begin{equation}
+ \rm {SF}^\mu = \rm {SF}^\mu_{\rm {ID}}\times \rm {SF}^\mu_{\rm {iso}}\times \rm {SF}^\mu_{\rm {track}}\times \rm {SF}^\mu_{\rm {trig}}, \quad
+ \rm {SF}^{ele} = \rm {SF}^{ele}_{\rm {ID}}\times \rm {SF}^{ele}_{\rm {reco}}\times \rm {SF}^{ele}_{\rm {trig}},
+\label{eq:lepSF}
+\end{equation}
+where $\rm {SF}^\mu_{\rm {ID}}$, $\rm {SF}^\mu_{\rm {iso}}$, $\rm {SF}^\mu_{\rm {track}}$ and $\rm {SF}^\mu_{\rm {trig}}$ are weighted
+average with luminosity ($L$) for different eras (BCDEF and GH) \eg 
+\begin{equation}
+ \rm {SF}^\mu_{\rm {ID}}=\frac{\rm {SF}^\mu_{\rm {ID}}({\rm {BCDEF}})\times L({\rm {BCDEF}})+\rm {SF}^\mu_{\rm {ID}}({\rm {GH}})\times L({\rm {GH}})}
+ {L({\rm {BCDEF}})+L({\rm {GH}})},
+\end{equation}
+where, for example, $\rm {SF}^\mu_{\rm {ID}}({\rm {BCDEF}})$ is the scale factor for 
+era-B to era-F and L({\rm {BCDEF}}) is the luminosity during this period. A similar formula 
+for $\rm {SF}^\mu_{\rm {iso}}$, $\rm {SF}^\mu_{\rm {track}}$ and $\rm {SF}^\mu_{\rm {trig}}$ is used. The scale 
+factors of Equation (\ref{eq:lepSF}) are applied on simulated events. 
+
+\section{Jet and \MET correction}
+\label{s:JEC}
+Jets from simulations are smeared using jet energy scale (JES) and jet energy 
+resolution (JER) to have the same resolution as that in data~\cite{Khachatryan:2016kdb}.
+For smearing, $\pt$ and $\eta$ dependent scale factors are used as listed 
+in Table~\ref{tab:jer_sf}. The $\pt$ of jet in simulations is scaled by the 
+following factor:
+\begin{equation}
+    {\pt}_{\text{scale}} = {\rm {max}}[0.0,1.0+(\rm{SF}-1)\times({\pt}_{\text{jet}}-{\pt}_{\text{jet}}^{\text{gen}})/{\pt}_{\text{jet}}]
+\end{equation}
+with the following constraint:
+\begin{equation}
+    {\pt}_{\text{jet}}^{\text{gen}}> 0, \quad \Delta \rm R<0.2, \quad |{\pt}_{\text{jet}}-{\pt}_{\text{jet}}^{\text{gen}} |<
+    3\times\sigma_{\rm {JER}}\times{\pt}_{\text{jet}},
+\end{equation}
+where $\Delta \rm R$ is the angular separation between the reconstructed and 
+generated jet and $\sigma_{\text{JER}}$ is resolution of \pt of reconstructed jet. 
+\begin{table}
+    \caption{Jet energy resolution scale factors for different $\eta$ range}
+ \label{tab:jer_sf}
+ \begin{center}
+ \begin{tabular}{cccc}
+     \hline
+     \hline
+     $\eta$ range & base & down & up \\ 
+     \hline
+     \hline
+     $0.0 \leq | \eta |< 0.5 $ & 1.109 & 1.044 & 1.174 \\
+     $0.5 \leq | \eta |< 0.8 $ & 1.138 & 1.072 & 1.204 \\
+     $0.8 \leq | \eta |< 1.1 $ & 1.114 & 1.050 & 1.178 \\
+     $1.1 \leq | \eta |< 1.3 $ & 1.123 & 1.022 & 1.224 \\
+     $1.3 \leq | \eta |< 1.7 $ & 1.084 & 0.985 & 1.183 \\
+     $1.7 \leq | \eta |< 1.9 $ & 1.082 & 0.973 & 1.191 \\
+     $1.9 \leq | \eta |< 2.1 $ & 1.140 & 1.020 & 1.260 \\
+     $2.1 \leq | \eta |< 2.3 $ & 1.067 & 0.953 & 1.181 \\
+     $2.3 \leq | \eta |< 2.5 $ & 1.177 & 0.967 & 1.387 \\
+     $2.5 \leq | \eta |< 2.8 $ & 1.364 & 1.203 & 1.525 \\
+     $2.8 \leq | \eta |< 3.0 $ & 1.857 & 1.654 & 2.060 \\
+     $3.0 \leq | \eta |< 3.2 $ & 1.328 & 1.203 & 1.453 \\
+     $3.2 \leq | \eta |< 5.0 $ & 1.160 & 1.013 & 1.307 \\ \hline
+ \end{tabular}
+ \end{center}
+ \end{table}
+
+\section{\text{b} tag scale factor}
+\label{s:bTagSF}
+The \PQb tagging efficiency is different between simulation and data.
+An event weight as given by Equation (\ref{eq:btagWt}) is applied on the simulated events to 
+take care of this difference ~\cite{BTagSFMethods}. 
+\begin{equation}
+P(\text{Simulation}) = \prod_{\text{i = tagged}} \epsilon_i \prod_{\text{j = not tagged}}(i -\epsilon_j)
+\end{equation}
+\begin{equation}
+P(\text{Data}) = \prod_{\text{i = tagged}} \text{SF}_{i}\epsilon_i \prod_{\text{j = not tagged}} (1-\text{SF}_j\epsilon_j)
+\end{equation}
+\begin{equation}
+w = \frac{P(\text{Data})}{P(\text{Simulation})}
+\label{eq:btagWt}
+\end{equation}
+ The \PQb tagging efficiency $\epsilon_f(m,n)$ in the $(m,n)$ bin of $\pt$ and $\eta$ is calculated 
+ using the following formula                                                               
+ \begin{equation}                                                                          
+  \epsilon_f(m,n)=\frac{N^{\rm {\PQb-tagged}}_f(m,n)}{N^{\rm {total}}_f(m,n)},                   
+ \label{eq:btag_eff}                                                                       
+ \end{equation}                                                                            
+ where $N^{\rm {\PQb-tagged}}_f(m,n)$ is the number of \PQb-tagged jets with flavor \text{f}
+(\PQb quark, \PQc quark, light quark, and gluon) and $N^{\rm {total}}_f(m,n)$ is the total number 
+of events. The scale factor ($\text{SF}_i$) depends on $\pt$, $\eta$, parton flavor of jet, and 
+\PQb jet discriminator value. 
+

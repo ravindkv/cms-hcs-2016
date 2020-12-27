@@ -1,0 +1,190 @@
+%% LyX 2.3.1-1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\usepackage{newcent}
+\usepackage{helvet}
+\usepackage{courier}
+\renewcommand{\familydefault}{\rmdefault}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2cm,rmargin=2cm}
+\setcounter{secnumdepth}{3}
+\usepackage{color}
+\usepackage{babel}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\makeindex
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{setspace}
+\usepackage{nomencl}
+\usepackage{acronym} 
+% the following is useful when we have the old nomencl.sty package
+%\providecommand{\printnomenclature}{\printglossary}
+%\providecommand{\makenomenclature}{\makeglossary}
+%\makenomenclature
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=true]
+ {hyperref}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+%\numberwithin{equation}{section}
+%\numberwithin{figure}{section}
+\newlist{casenv}{enumerate}{4}
+\setlist[casenv]{leftmargin=*,align=left,widest={iiii}}
+\setlist[casenv,1]{label={{\itshape\ \casename} \arabic*.},ref=\arabic*}
+\setlist[casenv,2]{label={{\itshape\ \casename} \roman*.},ref=\roman*}
+\setlist[casenv,3]{label={{\itshape\ \casename\ \alph*.}},ref=\alph*}
+\setlist[casenv,4]{label={{\itshape\ \casename} \arabic*.},ref=\arabic*}
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{\protect\definitionname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{multicol} %For multiple columns
+\usepackage{mathptmx} % For times new roman font
+\usepackage{lscape} %For Putting a picture on whole page in landscape mode
+\usepackage{setspace}
+\usepackage{enotez}
+\usepackage{array}
+\usepackage{wrapfig}
+\renewcommand{\nomname}{Glossary of Symbols \& Terms}
+\usepackage{lettrine} %For Dropcaps
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\usepackage{scrextend}
+\newcolumntype{D}[1]{>{\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} 
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\usepackage[font=sf]{caption}
+\let\footnote=\endnote
+\setenotez{
+  reset = true ,
+  list-heading = \section*{#1}
+}
+\newcommand\Fontvii{\fontsize{6}{7.2}\selectfont}
+
+%%%%%%%% rverma %%%%%%%%%%%%%
+%\newcommand{\pt}{pT }
+%\newcommand{\pt}{$p_{T}$}
+%\newcommand{\unit}[1]{\textrm{#1}}
+%\newcommand{\MET}{$E_{T}^{miss}$ }
+\renewcommand{\bf}{\textbf}
+\renewcommand{\it}{\textit}
+\renewcommand{\rm}{\textrm}
+\renewcommand{\arraystretch}{1.2}
+\newcommand{\quotes}[1]{``#1''}
+\newcommand{\dq}{\quotes}
+\usepackage[toc,page]{appendix}
+\usepackage{adjustbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%---------------------------------
+%CERN-LHC-CMS specific
+%%---------------------------------
+\RequirePackage{ptdr-definitions}
+\RequirePackage{changepage}
+\RequirePackage{heppennames2}
+\RequirePackage{hypernat}
+\RequirePackage{maybemath}
+\RequirePackage{pdfdraftcopy}
+\RequirePackage{placeins}
+\RequirePackage{topcapt}
+\newcommand{\Hp}{\ensuremath{\PH^+}\xspace}
+\newcommand{\Hn}{\ensuremath{\PH^-}\xspace}
+\newcommand{\ttjets}{\ensuremath{\ttbar + \text{jets}}\xspace}
+\newcommand{\wjets}{\ensuremath{\PW + \text{jets}}\xspace}
+\newcommand{\dyjets}{\ensuremath{\PZ/\PGg + \text{jets}}\xspace}
+\newcommand{\mjj}{\ensuremath{m_\text{jj}}\xspace}
+\newcommand{\mt}{\ensuremath{m_{\PQt}}\xspace}
+\newcommand{\mujets}{\ensuremath{\mu + \text{jets}}\xspace}
+\newcommand{\ejets}{\ensuremath{\text{e} + \text{jets}}\xspace}
+\newcommand{\ljets}{\ensuremath{\ell + \text{jets}}\xspace}
+
+\newcommand{\mHp}{\ensuremath{m_{\text{H}^+}}\xspace}
+\newcommand{\brHcs}{\ensuremath{\mathcal{B}(\text{H}^+ \rightarrow \text{c}\bar{\text{s}})}\xspace}
+\newcommand{\brHtv}{\ensuremath{\mathcal{B}(\text{H}^+ \rightarrow \tau^+\nu_\tau)}\xspace}
+\newcommand{\brThb}{\ensuremath{\mathcal{B}(\text{t} \rightarrow \text{H}^+ \text{b})}\xspace}
+\newcommand{\brTwb}{\ensuremath{\mathcal{B}(\text{t} \rightarrow \text{W}^+ \text{b})}\xspace}
+\newcommand{\brTwq}{\ensuremath{\mathcal{B}(\text{t} \rightarrow \text{W}^+ \text{q})}\xspace}
+\newcommand{\sigHp}{\ensuremath{\sigma(\text{pp} \rightarrow \text{t} \text{H}^+ + \text{X})}\xspace}
+
+\usepackage{cite}
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+%\usepackage{subfig}
+\makeatother
+
+\providecommand{\casename}{Case}
+\providecommand{\definitionname}{Definition}
+\providecommand{\theoremname}{Theorem}
+
+
+%%%%%%%%% to include publications %%%%%%%%
+\usepackage{textcomp} % text version of symbols in TS1, e.g. \textrightarrow{}
+\usepackage{amstext} % proper support of frequently used \text{} command
+\newif\ifshowcitations\showcitationsfalse%
+\newif\ifshowlinks\showlinksfalse%
+\ifshowlinks%
+  \usepackage[
+         colorlinks=true,
+         urlcolor=blue,       % \href{...}{...} external (URL)
+         ]{hyperref}
+  \newcommand*{\inspireurl}[1]{\\\href{#1}{INSPIRE-HEP entry}}
+\else
+  \makeatletter
+  \newcommand*{\inspireurl}[1]{\@bsphack\@esphack}
+  \makeatother
+\fi
+\ifshowcitations%
+  \newcommand*{\citations}[1]{\\* #1}
+\else
+  \makeatletter
+  \newcommand*{\citations}[1]{\@bsphack\@esphack}
+  \makeatother
+\fi
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+
+%%% to remove bullet points
+%\usepackage{enumitem}
+%{\renewcommand\labelitemi{}
+%\setlength{\cftfigurenumwidth}{5em}
+\makeatletter
+\renewcommand{\l@figure}{\@dottedtocline{1}{1.5em}{2.3em}}
+\makeatother
+
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+%\pagestyle{fancyplain}
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+%\renewcommand{\sectionmark}[1]{\markleft{\thesection\ #1}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\lhead[\fancyplain{}{\thepage}]
+{\fancyplain{}{\rightmark}}
+\rhead[\fancyplain{}{\leftmark}]
+{\fancyplain{}{\thepage}}
+\cfoot{}
+\cfoot[\fancyplain{\rm\thepage}{}]{\fancyplain{\rm\thepage}{}}
+\pagenumbering{arabic}
+
+%\oddsidemargin 0.0in
+\textwidth 6.5in
+%\topmargin -0.75in
+%\topmargin 2.5cm
+%\bottommargin 2.5cm
+\textheight 9.0in
+%\textheight 9.5in
+
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+%%%%%%%%%%\oddsidemargin +0.4 cm
+\flushbottom
+%\textheight 21cm
+%\renewcommand{\familydefault}{\sfdefault}

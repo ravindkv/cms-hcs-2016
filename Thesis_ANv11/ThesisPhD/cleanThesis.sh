@@ -1,0 +1,17 @@
+rm ThesisPhD.aux
+rm ThesisPhD.bbl
+rm ThesisPhD.blg
+rm ThesisPhD.dvi
+rm ThesisPhD.idx
+rm ThesisPhD.lof
+rm ThesisPhD.log
+rm ThesisPhD.lot
+rm ThesisPhD.nlo
+rm ThesisPhD.out
+rm ThesisPhD.synctex.gz
+rm ThesisPhD.toc
+rm ThesisPhD.acn
+rm ThesisPhD.glo
+rm ThesisPhD.glsdefs
+rm ThesisPhD.out.ps
+rm ThesisPhD.ist

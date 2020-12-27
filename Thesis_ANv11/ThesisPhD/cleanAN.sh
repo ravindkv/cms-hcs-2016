@@ -1,0 +1,13 @@
+rm -rf Image/HplusBR/
+rm -rf Image/OTHER/
+rm -rf Image/MLFit/FitDiag/
+rm -rf Image/MLFit/ScanNuis/
+rm -rf Image/Electron/LowMET/
+rm -rf Image/Muon/LowMET/
+rm -rf Image/.svn/
+rm -rf Image/*/.svn
+rm -rf Image/*/*/.svn
+rm -rf Image/*/*/*/.svn
+rm -rf Table/.svn/
+rm -rf Table/*/.svn
+rm -rf Section/.svn/

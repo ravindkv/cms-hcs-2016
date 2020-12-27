@@ -1,0 +1,72 @@
+%\documentclass[12pt]{report}
+\documentclass[11pt,english]{scrbook}
+\include{University/latexHarvest}
+%\linespread{1.5}
+\begin{document}
+%%-----------------------------------
+%% University specifics
+%%-----------------------------------
+
+\baselineskip 20pt
+\abovedisplayskip=0mm
+\belowdisplayskip=5mm
+\abovedisplayshortskip=0mm
+\belowdisplayskip=5mm
+\abovedisplayshortskip=0mm
+\belowdisplayshortskip=5mm
+\parskip=0.25cm
+
+\pagestyle{plain}
+\include{University/studentDetails}
+\frontmatter
+\include{University/certificate}
+\include{University/synopsis}
+\include{University/Publication}
+\include{University/dedication}
+\include{University/acknowledge}
+\include{University/prologue}
+\include{University/abbreviation}
+
+%%%-----------------------------------
+%%% Latex specifics
+%%%-----------------------------------
+\tableofcontents
+\listoffigures
+\listoftables
+\markboth{\nomname}{\nomname}
+\mainmatter
+
+%%%-----------------------------------
+%%% Thesis specifics
+%%%-----------------------------------
+\pagestyle{fancyplain}
+\part{The Standard Model and Beyond}
+\label{part:theory} 
+\include{Theory/partTheory}
+
+\part{The CMS Experiment at The LHC, CERN}
+\label{part:cms} 
+\include{Experiment/partExperiment}
+
+\part{Search for Charged Higgs Boson}
+\label{part:analysis} 
+\include{Analysis/partAnalysis}
+
+%%%-----------------------------------
+%%% Reference specifics
+%%%-----------------------------------
+\begin{singlespace}
+\bibliographystyle{unsrt}
+\phantomsection\addcontentsline{toc}{chapter}{\bibname}
+\bibliography{University/synopsis.bib,Theory/partTheory.bib,Experiment/partExperiment.bib,Analysis/partAnalysis.bib}
+%\bibliography{Analysis/partAnalysis.bib}
+\end{singlespace}
+
+
+%%%-----------------------------------
+%%% Appendix
+%%%-----------------------------------
+\begin{singlespace}
+\printindex{}
+\end{singlespace}
+\end{document}
