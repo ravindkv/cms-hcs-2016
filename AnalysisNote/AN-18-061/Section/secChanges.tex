@@ -1,0 +1,291 @@
+
+The analysis was started in early 2016 and published in late 2020. A
+detailed timeline of the analysis is shown in the above figure. 
+For every new version of the analysis note (AN), there were a few major 
+changes w.r.t the previous version. In total there were 12 versions of
+the AN. A detailed comparison of all major changes in the all versions
+of the AN are listed in the following tables.
+
+\begin{table}
+\centering
+\caption*{Authors and principal reviewers of the analysis note}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{p{8cm}|p{8cm}}
+\hline
+{\textbf{Authors}} & {Shashi Dugad, Gouranga Kole, Gagan Mohanty, Arun Nayak, and Ravindra Kumar Verma}\\
+\hline
+{\textbf{Higgs-EXO conveners}} & {Abdollah Mohammadi and Anne-Marie}\\
+\hline
+{\textbf{Higgs-combine conveners}}     & {David Sperka, Andrea Marini, and Giacomo Ortona}\\
+\hline
+{\textbf{Higgs conveners}}     & { Giovanni Petrucciani, Roberto Salerno, and Maria Cepeda}\\
+\hline
+{\textbf{Analysis review committee}}     & { Meenakshi Narain (chair), Varun Sharma (interim chair), Paul Lujhan (language editor for paper), Sourabh Dube, and Anna Kropivnitskaya}\\
+\hline
+{\textbf{Introduction section}} & {Pankaj Jain (IIT Kanpur)}\\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}
+\centering
+\caption*{Comparison of major changes in the AN from v11 and
+v12.}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{p{8cm}|p{8cm}}
+\hline
+{\bf{AN2018\_061\_v11 (23/09/2019)}} & {\bf{AN2018\_061\_v12 (29/12/2020)}}\\
+\hline
+The lepton data-to-simulation scale factors were 1 for \pt greater than the maximum \pt-range of 2D histograms & For $\pt > \pt^{max}$, scale factors are taken for $\pt^{max}$. Although they are close to 1\\
+\hline
+Used different seed for random number generation for Rochester correction for all systematics & Used same seed for all systematics \\
+\hline
+Used rc.kScaleFromGenMC() function with incorrect arguments for Rochester correction & Used rc.kScaleAndSmearMC() function with correct arguments\\
+\hline
+Description about the addition of exclusive and inclusive \PW/\PZ + jets samples was based on luminosity & Described them based on hepNUP variable \\
+\hline
+SF = $exp(0.0615 - 0.0005 \pt )$ for \PQt-quark \pt systematics with parton level \PQt-quark. Relative difference between the event yields without and applying SF$^2$ was considered as the systematics uncertainty& SF = $exp(0.076 - 0.00076\pt)$ with particle level \PQt-quark. Difference between nominal and SF applied. Rewrote \PQt-quark \pt reweighting section in more detail \\
+\hline
+QCD multijet sample \verb|QCD_Pt-15to20_EMEnriched| for electron channel & Removed it \\
+\hline
+Global tag \verb|80X_mcRun2_asymptotic| \verb|_2016_TrancheIV_v6| & \verb|80X_mcRun2_asymptotic| \verb|_2016_TrancheIV_v10| \\
+\hline
+- & Described the likelihood functions used for setting the upper limit \\
+\hline
+Only one table for showing the changes w.r.t. the current and previous versions of the analysis note & Kept all previous tables \\
+\hline
+- & Added timeline of the analysis \\
+\hline
+\textcolor{red}{Total 134 pages}                 & \textcolor{green}{Total 140 pages}\\\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+\begin{table}
+\centering
+\caption*{Comparison of major changes in the AN from v10 and
+v11.}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{p{8cm}|p{8cm}}
+\hline
+{\bf{AN2018\_061\_v10 (09/09/2019) }} & {\bf{AN2018\_061\_v11 (23/09/2019) }}\\
+\hline 
+-              & Added correlation matrix of most significant fit parameters \\\hline
+-              & Reproduced impact plots by using additional argument "- - cminDefaultMinimizerStrategy 0" in the command line\\\hline
+-              & Used "newpage" latex command before a few sections\\\hline
+-              & Rewrote and reshuffled a few sections for a better clarity \\\hline
+Fit diagnostics in appendix     & It is in the main part  \\\hline
+Impact plot in main part        & It is in the appendix  \\\hline
+Useful commands in main part    & Put all commands in the appendix and referred them appropriately  \\\hline
+\textcolor{red}{Total 127 pages}                 & \textcolor{green}{Total 134 pages}\\\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}
+\centering
+\caption*{Comparison of major changes in the AN from v9 and
+v10.}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{p{8cm}|p{8cm}}
+\hline
+{\bf{AN2018\_061\_v9 (04/07/2019) }} & {\bf{AN2018\_061\_v10 (09/09/2019) }}\\
+\hline 
+Pre-fit yields and distributions  & Pre and post-fit yields and distributions\\\hline 
+-              & Added $\mathcal{B}(t \rightarrow H^{+}b) = 0.065$ in plots\\\hline
+-              & Added a plot showing final limits from 8 \TeV and 13 \TeV analysis \\\hline
+\textcolor{red}{Total 124 pages}                 & \textcolor{green}{Total 127 pages}\\\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}
+\centering
+\caption*{Comparison of major changes in the AN from v8 and
+v9.}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{p{8cm}|p{8cm}}
+\hline
+{\bf{AN2018\_061\_v8 (26/06/2019) }} & {\bf{AN2018\_061\_v9 (04/07/2019) }}\\
+\hline 
+Conservative styles for figures, plots, and tables  & Followed CMS guidelines for each of them\\\hline 
+Blinded analysis              & Un-blinded analysis\\\hline
+\textcolor{red}{Total 120 pages}                 &\textcolor{green}{Total 124 pages}\\\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}
+\centering
+\caption*{Comparison of major changes in the AN from v7 and
+v8.}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{p{8cm}|p{8cm}}
+\hline
+{\bf{AN2018\_061\_v7 (17/04/2019) }} & {\bf{AN2018\_061\_v8 (26/06/2019) }}\\
+\hline 
+$M_{H^\pm}$, $M_{jj}$           & $m_{H^+}$, $m_{jj}$ \\\hline 
+Considered systematic uncertainty in the QCD estimation as change in the transfer 
+scale factor & Considered it as a change in the yield \\\hline
+-              & Added uncertainty table for exclusive charm categories\\\hline
+\textcolor{red}{Total 118 pages}                 & \textcolor{green}{Total 120 pages}\\\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}
+\centering
+\caption*{Comparison of major changes in the AN from v6 and
+v7.}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{p{8cm}|p{8cm}}
+\hline
+{\bf{AN2018\_061\_v6 (01/02/2019) }} & {\bf{AN2018\_061\_v7 (17/04/2019) }}\\
+\hline 
+Muon: \verb|HLT_IsoMu24*|       & \verb|HLT_IsoMu24*| OR \verb|HLT_IsoTkMu*|\\\hline
+Muon: $\eta < 2.1$              & $\eta  < 2.4$ \\\hline 
+Electron: $d0 <0.05$, $dz < 0.20$ & $ d0<0.05$, $dz<0.10$ (in barrel), and $d0<0.10$, $dz<0.20$ (in endcap)\\\hline
+Electron: relative isolation $< 0.08$      & Relative isolation $< 0.0821$ for barrel and $< 0.0695$ for endcap\\\hline 
+-                               & For jets: charged hadron multiplicity $> 0$, number of constituent $> 1$, charged hadron electromagnetic energy fraction $<0.99$\\\hline
+\ptmiss filters not applied     & All filters have been applied \\\hline
+-                               & Scaled signal events by the maximum observed upper limit at 8 \TeV in the plots.\\\hline
+-                               & Added table for event yields from exclusive charm categories.\\\hline
+A brief description of the kinematic fitting  & Described it in detail \\\hline
+-                               & Added reconstruction, identification, and trigger efficiency plots for electron and muon\\\hline
+-                               & Added tables for \PQb/\PQc tagging efficiency\\\hline
+-                               & Updated all the tables and plots for a better visibility\\\hline
+Unblinded analysis              & Blinded analysis\\\hline
+\textcolor{red}{Total 110 pages}                 & \textcolor{green}{Total 118 pages}\\\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+\begin{table}
+\centering
+\caption*{Comparison of major changes in the AN from v5 and
+v6.}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{p{8cm}|p{8cm}}
+\hline
+{\bf{AN2018\_061\_v5 (11/01/2019) }} & {\bf{AN2018\_061\_v6 (01/02/2019) }}\\
+\hline
+Blinded analysis i.e. the observed data was shown only in the control regions and the exclusion limits were computed using MC simulation& Un-blinded analysis i.e. the observed data was also used in the signal region and limit computation\\
+\hline
+- & Added goodness-of-fit test\\
+\hline
+The systematic uncertainties corresponding to the renormalization and factorisation scale and damping parameters  were profiled as "shape"& These are profiled as "lnN" as the ratio of these with nominal histograms is consistent with a flat line\\
+\hline
+\textcolor{red}{Total 109 pages}                 & \textcolor{green}{Total 110 pages}\\\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}
+\centering
+\caption*{Comparison of major changes in the AN from v4 and
+v5.}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{p{9cm}|p{9cm}}
+\hline
+{\bf{AN2018\_061\_v4 (14/05/2018)}} & {\bf{AN2018\_061\_v5 (11/01/2019) }}\\
+\hline
+${\pt}_{\mu} > 25$ GeV & ${\pt}_{\mu} > 26$ GeV  \\
+\hline
+Applied \PQb/\PQc tag data-to-simulation scale factors using the promote-demote method & Applied these scale factors using event-by-event reweigting\\
+\hline
+- & Added TProfile plots between \ptmiss and $I_{rel}$ for simulated QCD multijet sample. Removed few columns (after applying various scale factors) from cutflow tables. Considered one extra nuisance parameter as a systematic uncertainty for exclusive charm categories. Applied a proper correlation between \PQb/\PQc-tagged scale factors. Added signal to background ratio plot from exclusive charm categories for all masses of the charged Higgs. Added a section on the profiling of nuisance parameters in the likelihood. For comparison, added plots showing the ratio between base and up or down histograms for the different systematic uncertainties\\
+\hline
+Considered one nuisance parameter in each bin of only \ttbar, single \PQt, \PW+jets, and
+charged Higgs signal samples, manually, for bin-by-bin uncertainties & Assigned one nuisance parameter in each bin in the sum of all background and signal processes using autoMCStats tool which is based on Barlow-Beeston-lite approach. \textcolor{red}{After using autoMCStats, event categorisation in bins of \pt of \PQb jets does not improve the expected limit}. Hence, moved \PQb jet \pt binning section in the appendix \\
+\hline
+Systematic uncertainty in the luminosity measurement = 2.7\% and lepton selection = 3.1\% & It is 2.5\% and 3.0\%, respectively \\
+\hline
+Various systematic uncertainties such as those from \PQb/\PQc tagging, jet energy corrections (jet energy scale and resolution), pileup reweighting, \PQt-quark \pt reweighting, and measurement in the \PQt-quark mass were profiled as "shape" in the data card for limit computation & Now these profiled as "lnN" \\ 
+\hline
+NPs from statistical uncertainty in the total number of events from each simulated sample were included in the data card & These NPs are removed from the data card, as they are internally included from autoMCStats tool \\
+\hline
+The NPs were named following the conventions of 8 \TeV analysis. & They are renamed using recommended conventions at 13 \TeV\\
+\hline
+- & Added plots for fit diagnostics, the variation of likelihood as function of individual NP, and showing the impacts of NPs on the parameter of interest \\
+\hline
+- & Updated all tables with latest results, proper fonts etc\\
+\hline
+The stacked and ratio plots were in a different pads & They are in the same pad \\
+\hline
+- & Added plots showing the observed data and simulated events from a control region ($\ptmiss < $) 20 GeV\\
+\hline
+- & Added a section on the background contribution from all SM Higgs production processes. Included limits for the charged Higgs mass of 80 GeV\\
+\hline
+\textcolor{red}{Total 81 pages}                 & \textcolor{green}{Total 109 pages}\\\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+\begin{table}
+\centering
+\caption*{Comparison of major changes in the AN from v3 and
+v4.}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{p{8cm}|p{8cm}}
+\hline
+{\bf{AN2018\_061\_v3 (04/05/2018) }} & {\bf{AN2018\_061\_v4 (14/05/2018) }}\\
+\hline
+- & Added columns in table 17 and 18 for the systematic uncertainties corresponding to the mis-identified \PQb and \PQc jet tagging\\
+\hline
+\textcolor{red}{Total 81 pages}                 & \textcolor{green}{Total 81 pages}\\\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+
+\begin{table}
+\centering
+\caption*{Comparison of major changes in the AN from v2 and
+v3.}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{p{8cm}|p{8cm}}
+\hline
+{\bf{AN2018\_061\_v2 (06/04/2018) }} & {\bf{AN2018\_061\_v3 (04/05/2018) }}\\
+\hline
+Integrated luminosity = 35.50 \fbinv & 35.9 \fbinv \\
+\hline
+Muon isolated data-to-simulation scale factors were applied to all muons (isolated and non-isolated) & Only applied to isolated muons\\
+\hline
+Kinematic cuts (Table-4) + medium muon ID for second muon to be vetoed &  Only Kinematic cuts (Table-4) for the second muon to be vetoed with no requirement on tracker related or $\chi^2$ cuts\\
+\hline
+Electron relative isolation cut was, by mistake, not applied inside the code on the second electron to be vetoed (although it is shown in Table-5) &  Now applied \\ 
+\hline
+While evaluating data-to-simulation normalization, the cross-section for the charged Higgs sample was taken to be $ 0.32 \times \sigma_\ttbar$ & Now, it is taken to be $ 0.2132 \times \sigma_\ttbar$ \\
+\hline
+A fixed 3.3\% pileup uncertainty was considered for all simulated samples & The minimum bias cross section is varied by 4.7\% up and down and the corresponding pileup weights are applied. The pileup uncertainty is determined from the change w.r.t to base value \\
+\hline
+The \PQb and \PQc-tagged data-to-simulated scale factors were applied for the 
+\ttbar, charged Higgs signal, and single top production processes. For the rest 
+simulated samples such as as \PW+jets, \PZ+jets, VV processes, the corresponding 
+mis-tagged scale factors were applied  & Now the \PQb and \PQc-tagged scale factors 
+are applied for all simulated samples \\ 
+\hline
+\textcolor{red}{Total 79 pages}                 & \textcolor{green}{Total 81 pages}\\\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\begin{table}
+\centering
+\caption*{Comparison of major changes in the AN from v1 and
+v2.}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{p{8cm}|p{8cm}}
+\hline
+{\bf{AN2018\_061\_v1 (12/03/2018)}} & {\bf{AN2018\_061\_v2 (06/04/2018) }}\\
+\hline
+Being the first version of the AN, the documentation was too preliminary & Following the suggestions from authors, updated whole AN to be reviewed by the Higgs-EXO conveners\\
+\hline
+\textcolor{red}{Total 57 pages}                 & \textcolor{green}{Total 79 pages}\\\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}

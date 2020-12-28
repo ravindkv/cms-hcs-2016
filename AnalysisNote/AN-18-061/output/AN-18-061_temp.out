@@ -1,0 +1,67 @@
+\BOOKMARK [1][-]{section.1}{1 Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{2 Search strategy at 13 TeV}{}% 2
+\BOOKMARK [1][-]{section.3}{3 Data and Simulated Samples}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{3.1 Data Samples}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{3.2 Simulated Samples}{section.3}% 5
+\BOOKMARK [1][-]{section.4}{4 Physics Object Reconstruction and Selection}{}% 6
+\BOOKMARK [2][-]{subsection.4.1}{4.1 Primary Vertex and Diffuse Offset Energy Density}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.2}{4.2 Muon}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.3}{4.3 Electron }{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.4}{4.4 Jet}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.5}{4.5 Missing Transverse Energy}{section.4}% 11
+\BOOKMARK [1][-]{section.5}{5 b-jet Tagging}{}% 12
+\BOOKMARK [2][-]{subsection.5.1}{5.1 Track Selection}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.2}{5.2 Reconstruction of Secondary Vertex}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.3}{5.3 Multi-layer Perceptron Training}{section.5}% 15
+\BOOKMARK [1][-]{section.6}{6 Kinematic fit}{}% 16
+\BOOKMARK [2][-]{subsection.6.1}{6.1 Input to the TopKinFitter}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.2}{6.2 Separation of jets}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.3}{6.3 Kinematic constraints}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.4}{6.4 Chi-square of the fit}{section.6}% 20
+\BOOKMARK [2][-]{subsection.6.5}{6.5 Output of the KinFit}{section.6}% 21
+\BOOKMARK [2][-]{subsection.6.6}{6.6 Selection and Performance}{section.6}% 22
+\BOOKMARK [1][-]{section.7}{7 c-jet Tagging}{}% 23
+\BOOKMARK [1][-]{section.8}{8 Corrections on MC}{}% 24
+\BOOKMARK [2][-]{subsection.8.1}{8.1 Luminosity Scale Factors}{section.8}% 25
+\BOOKMARK [2][-]{subsection.8.2}{8.2 Pileup Reweighting}{section.8}% 26
+\BOOKMARK [2][-]{subsection.8.3}{8.3 Lepton Scale Factors}{section.8}% 27
+\BOOKMARK [2][-]{subsection.8.4}{8.4 Jet and MET Correction}{section.8}% 28
+\BOOKMARK [2][-]{subsection.8.5}{8.5 b-tag Scale Factor}{section.8}% 29
+\BOOKMARK [2][-]{subsection.8.6}{8.6 c-tag Scale Factor}{section.8}% 30
+\BOOKMARK [1][-]{section.9}{9 Event Filters and Triggers}{}% 31
+\BOOKMARK [2][-]{subsection.9.1}{9.1 Filters}{section.9}% 32
+\BOOKMARK [2][-]{subsection.9.2}{9.2 Triggers}{section.9}% 33
+\BOOKMARK [1][-]{section.10}{10 Event Selection}{}% 34
+\BOOKMARK [1][-]{section.11}{11 QCD Multijet Estimation}{}% 35
+\BOOKMARK [2][-]{subsection.11.1}{11.1 Determination of transfer scale factor}{section.11}% 36
+\BOOKMARK [2][-]{subsection.11.2}{11.2 Estimation of QCD multijet in the signal region}{section.11}% 37
+\BOOKMARK [2][-]{subsection.11.3}{11.3 Comparison of data-driven QCD multijet shapes}{section.11}% 38
+\BOOKMARK [1][-]{section.12}{12 Control Plots in Signal Region}{}% 39
+\BOOKMARK [1][-]{section.13}{13 Mass Reconstruction}{}% 40
+\BOOKMARK [1][-]{section.14}{14 Systematic Uncertainties}{}% 41
+\BOOKMARK [2][-]{subsection.14.1}{14.1 Experimental Uncertainties}{section.14}% 42
+\BOOKMARK [2][-]{subsection.14.2}{14.2 Theoretical Uncertainties}{section.14}% 43
+\BOOKMARK [1][-]{section.15}{15 Categorization of Events}{}% 44
+\BOOKMARK [2][-]{subsection.15.1}{15.1 Inclusive Event Category without charm-jet Tagging}{section.15}% 45
+\BOOKMARK [2][-]{subsection.15.2}{15.2 Inclusive Event Category with Loose charm-jet Tagging}{section.15}% 46
+\BOOKMARK [2][-]{subsection.15.3}{15.3 Exclusive Event Categories Based on charm-jet Tagging}{section.15}% 47
+\BOOKMARK [1][-]{section.16}{16 Post-fit Analysis from Charm Categories}{}% 48
+\BOOKMARK [2][-]{subsection.16.1}{16.1 Profile of Nuisance Parameter: shape vs lnN}{section.16}% 49
+\BOOKMARK [2][-]{subsection.16.2}{16.2 Distributions of Pulls}{section.16}% 50
+\BOOKMARK [2][-]{subsection.16.3}{16.3 Post-fit Yields and Distributions}{section.16}% 51
+\BOOKMARK [2][-]{subsection.16.4}{16.4 Corelation Among the Nuisance Parameters}{section.16}% 52
+\BOOKMARK [1][-]{section.17}{17 Goodness of Fit}{}% 53
+\BOOKMARK [1][-]{section.18}{18 Exclusion Limits}{}% 54
+\BOOKMARK [2][-]{subsection.18.1}{18.1 Limits from inclusive event category without c tagging}{section.18}% 55
+\BOOKMARK [2][-]{subsection.18.2}{18.2 Limits from inclusive event category with loose c tagging}{section.18}% 56
+\BOOKMARK [2][-]{subsection.18.3}{18.3 Limits from exclusive event categories based on c tagging}{section.18}% 57
+\BOOKMARK [1][-]{section.19}{19 Conclusion}{}% 58
+\BOOKMARK [1][-]{appendix.A}{A Background Contribution from SM Higgs Production Process}{}% 59
+\BOOKMARK [1][-]{appendix.B}{B MadGraph vs POWHEG Sample}{}% 60
+\BOOKMARK [1][-]{appendix.C}{C Event Categorization in Bins of b-jet pT}{}% 61
+\BOOKMARK [1][-]{appendix.D}{D Data, MC Comparison in Low MET Region}{}% 62
+\BOOKMARK [1][-]{appendix.E}{E Effect of Systematics on dijet Distributions}{}% 63
+\BOOKMARK [1][-]{appendix.F}{F Impact of Uncertainties: Multi-dimensional Fit}{}% 64
+\BOOKMARK [1][-]{appendix.G}{G Useful Commands}{}% 65
+\BOOKMARK [1][-]{appendix.H}{H 2 DeltaNLL vs NPs: Multi-dimensional Fit}{}% 66
+\BOOKMARK [1][-]{appendix.I}{I Revision history of the Analysis Note}{}% 67

@@ -1,0 +1,37 @@
+Date: 18/1/2019
+Description: H+, mu +jets, mass 140 GeV, lumi=35.900000 fb-1
+---------------------------------------------------------------------------------------------------------
+imax   1  number of channels
+jmax   *  number of backgrounds
+kmax   *  number of nuisance parameters
+---------------------------------------------------------------------------------------------------------
+shapes * * Shapes_hcs_13TeV_mu_KinFit_mjj_kfit_CTagIncL_WH140.root $PROCESS $PROCESS_$SYSTEMATIC
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Observation    188202
+---------------------------------------------------------------------------------------------------------
+bin                            hcs_13TeV   hcs_13TeV   hcs_13TeV   hcs_13TeV   hcs_13TeV  hcs_13TeV hcs_13TeV
+process                        WH140       ttbar       wjet        zjet        stop        vv       qcd
+process                          0          1           2           3           4           5        6
+---------------------------------------------------------------------------------------------------------
+rate                    98080.748     180956.58     2577.6939     350.84017     5028.4436     130.7275     3868.1988
+---------------------------------------------------------------------------------------------------------
+lumi_13TeV           lnN      1.025      1.025      1.025        1.025      1.025     1.025   1.00      Luminosity unc.
+CMS_eff_m         lnN      1.03       1.03       1.03         1.03       1.03      1.03    1.00      Lepton selection unc.
+CMS_eff_bcInc1       lnN      1.016       1.010       1.011         1.018       1.004      1.012    1.00      cQcJ(cQuark_cJet) unc.
+CMS_eff_bcInc2       lnN      1.039       1.046       1.105         1.097       1.053      1.116    1.00      lQbJ + lQcJ unc.
+CMS_eff_bcInc3       lnN      1.056       1.043       1.064         1.073       1.047      1.035    1.00      bQbJ + bQcJ + cQbJ unc.
+CMS_pileup           lnN      1.007       1.008       1.024         1.031       1.004      1.062    1.00      Pileup unc.
+CMS_scale_j          lnN      1.078       1.075       1.205         1.172       1.107      1.200    1.00      JES unc.
+CMS_res_j            lnN      1.002       1.001       1.021         1.046       1.002      1.040    1.00      JER unc.
+CMS_norm_tt          lnN      1.061      1.061      1.00         1.00       1.00      1.00    1.00      TTbar xss unc.
+CMS_norm_stop        lnN      1.00       1.00       1.00         1.00       1.07      1.00    1.00      Single top xss unc.
+CMS_norm_wjet        lnN      1.00       1.00       1.045        1.00       1.00      1.00    1.00      W+jets xss unc.
+CMS_norm_zjet        lnN      1.00       1.00       1.00         1.05       1.00      1.00    1.00      Z+jets xss unc.
+CMS_norm_qcd         lnN      1.00       1.00       1.00         1.00       1.00      1.00    1.720      QCD data-driven unc.
+CMS_norm_vv          lnN      1.00       1.00       1.00         1.00       1.00      1.04    1.00      Diboson xss unc.
+CMS_topPtReweight    lnN      1.015       1.007         -           -          -         -       -        Top Pt reweighting unc.
+scaleRF_tt           shape     -         1.00         -           -          -         -       -        Renorm, factor scale Up/Down
+hDamp_tt             shape     -         1.00         -           -          -         -       -        Parton shower matching Up/Down 
+topMass_tt           lnN       -         1.011         -           -          -         -       -        Top mass Up/Down 
+* autoMCStats 0 1

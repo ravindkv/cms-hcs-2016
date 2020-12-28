@@ -1,0 +1,323 @@
+\RCS$Revision: 490967 $
+\RCS$HeadURL: svn+ssh://svn.cern.ch/reps/tdr2/notes/AN-18-061/trunk/AN-18-061.tex $
+\RCS$Id: AN-18-061.tex 490967 2019-03-05 06:34:23Z rverma $
+%%%%%%%%%%%%% local definitions %%%%%%%%%%%%%%%%%%%%%
+% This allows for switching between one column and two column (cms@external) layouts
+% The widths should  be modified for your particular figures. You'll need additional copies if you have more than one standard figure size.
+\newlength\cmsFigWidth
+\ifthenelse{\boolean{cms@external}}{\setlength\cmsFigWidth{0.49\textwidth}}{\setlength\cmsFigWidth{0.65\textwidth}} % example: one column in journal, 2/3 in CMS
+\ifthenelse{\boolean{cms@external}}{\providecommand{\cmsLeft}{upper\xspace}}{\providecommand{\cmsLeft}{left\xspace}}
+\ifthenelse{\boolean{cms@external}}{\providecommand{\cmsRight}{lower\xspace}}{\providecommand{\cmsRight}{right\xspace}}
+\renewcommand{\arraystretch}{1.2}
+
+\newcommand{\Hp}{\ensuremath{\PH^+}\xspace}
+\newcommand{\Hn}{\ensuremath{\PH^-}\xspace}
+\newcommand{\ttjets}{\ensuremath{\ttbar + \text{jets}}\xspace}
+\newcommand{\wjets}{\ensuremath{\PW + \text{jets}}\xspace}
+\newcommand{\dyjets}{\ensuremath{\PZ/\PGg + \text{jets}}\xspace}
+\newcommand{\mjj}{\ensuremath{m_\text{jj}}\xspace}
+\newcommand{\mt}{\ensuremath{m_{\PQt}}\xspace}
+\newcommand{\mhp}{\ensuremath{m_{\PSHp}}\xspace}
+\newcommand{\mujets}{\ensuremath{\mu + \text{jets}}\xspace}
+\newcommand{\ejets}{\ensuremath{\text{e} + \text{jets}}\xspace}
+\newcommand{\ljets}{\ensuremath{\text{l} + \text{jets}}\xspace}
+
+\newcommand{\mHp}{\ensuremath{m_{H^+}}\xspace}
+\newcommand{\brHcs}{\ensuremath{\mathcal{B}(H^+ \rightarrow c\bar{s})}\xspace}
+\newcommand{\brHtv}{\ensuremath{\mathcal{B}(H^+ \rightarrow \tau^+\nu_\tau)}\xspace}
+\newcommand{\brThb}{\ensuremath{\mathcal{B}(t \rightarrow H^+b)}\xspace}
+\newcommand{\Bthb}{\ensuremath{\mathcal{B}(\PQt \to \PSHp\PQb)}\xspace}
+\newcommand{\Bthbbar}{\ensuremath{\mathcal{B}(\PAQt \to \PSHm\PAQb)}\xspace}
+\newcommand{\brTwb}{\ensuremath{\mathcal{B}(t \rightarrow W^+b)}\xspace}
+\newcommand{\sigHp}{\ensuremath{\sigma(pp \rightarrow tH^+ + X)}\xspace}
+
+%\providecommand{\cmsTable}[1]{\resizebox{\textwidth}{!}{#1}}
+%%%%%%%%%%%%%%%  Title page %%%%%%%%%%%%%%%%%%%%%%%%
+\cmsNoteHeader{AN-18-061} % This is over-written in the CMS environment: useful as preprint no. for export versions
+% >> Title: please make sure that the non-TeX equivalent is in PDFTitle below
+\title{Search for a light charged Higgs boson in the $H^+ \to c\bar{s}$
+channel with lepton+jets final states at 13 TeV}
+
+\address[tifr]{Tata Institute of Fundamental Research, Mumbai, India}
+\address[IOP]{Institute of Physics, Bhubaneswar, India}
+\address[UCSD]{University of California San Diego, USA}
+\author[tifr]{S.R.~Dugad}
+\author[UCSD]{G.~Kole}
+\author[tifr]{G.B.~Mohanty}
+\author[IOP]{A.~Nayak}
+\author[tifr]{R.K.~Verma}
+
+\date{\today}
+
+\abstract{
+A search is conducted for a low-mass charged Higgs boson produced
+in a top quark decay and subsequently decaying into a charm and
+an antistrange quark. The data sample was recorded in proton-proton
+collisions at $\sqrt{s}=13\TeV$ by the CMS experiment at the LHC
+and corresponds to an integrated luminosity of 35.9\fbinv. The
+signal search is conducted in the process of top-quark pair production,
+where one top quark decays to a bottom quark and a charged Higgs
+boson, and the other to a bottom quark and a \PW boson. With
+the \PW boson decaying to a charged lepton (electron or muon) and a
+neutrino, the final state comprises an isolated lepton, missing
+transverse momentum, and at least four jets, of which two are tagged
+as \PQb jets. To enhance the search sensitivity, one of the jets
+originating from the charged Higgs boson is required to satisfy
+a charm tagging requirement. No significant excess beyond
+standard model predictions is found in the dijet invariant mass
+distribution. An upper limit in the range 0.26--1.68\% is set on the
+branching fraction of the top quark decay to the charged Higgs
+boson and bottom quark for a Higgs mass between 80 and 160\GeV.
+}
+
+\hypersetup{%
+pdfauthor={S.R. Dugad, G. Kole, G.B. Mohanty, A. Nayak, R.K. Verma},%
+pdftitle={Search for a light charged Higgs boson in the H+ to cs-bar
+channel with lepton + jets final states at 13 TeV with 2016 data},%
+pdfsubject={CMS},%
+pdfkeywords={CMS, physics, software, computing}}
+\maketitle %maketitle comes after all the front information has been supplied
+\tableofcontents
+\sloppy
+
+%-------------------------------------
+% Changes in the AN
+%-------------------------------------
+\newpage
+\input{Section/secTimeline.tex}
+\newpage
+
+%-------------------------------------
+% Introduction
+%-------------------------------------
+\newpage
+\section{Introduction}
+\label{s:secIntro}
+\input{Section/secIntro.tex}
+
+%-------------------------------------
+% Search strategy at 13 TeV
+%-------------------------------------
+\newpage
+\section{Search strategy at 13 TeV}
+\label{s:searchStrategy}
+\input{Section/secSearchStrategy.tex}
+
+%-------------------------------------
+% MC and Data Samples
+%-------------------------------------
+\newpage
+\section{Data and Simulated Samples}
+\label{s:secDataMC}
+\input{Section/secDataMC.tex}
+
+%-------------------------------------
+% Objet Reconstruction
+%-------------------------------------
+%\vspace{-5cm}
+\newpage
+\section{Physics Object Reconstruction and Selection}
+\label{s:secReco}
+\input{Section/secReco.tex}
+
+%-------------------------------------
+% b-tagging
+%-------------------------------------
+\section{b-jet Tagging}
+\label{s:bTag}
+\input{Section/secBTag.tex}
+
+%-------------------------------------
+% KinFit Fitting
+%-------------------------------------
+\section{Kinematic fit}
+\label{s:KinFit}
+\input{Section/secKinFit.tex}
+
+%-------------------------------------
+% c-tagging
+%-------------------------------------
+\section{c-jet Tagging}
+\label{s:cTag}
+\input{Section/secCTag.tex}
+
+%-------------------------------------
+% Corrections on MC
+%-------------------------------------
+\newpage
+\section{Corrections on MC}
+\label{s:secMCSF}
+\input{Section/secMCSF.tex}
+
+%-------------------------------------
+% Event filters and triggers
+%-------------------------------------
+\newpage
+\section{Event Filters and Triggers}
+\label{s:secFilters}
+\input{Section/secFilters.tex}
+
+%-------------------------------------
+% Event Selection
+%-------------------------------------
+\section{Event Selection}
+\label{s:secEvtSel}
+\input{Section/secEvtSel.tex}
+
+%-------------------------------------
+% Data-driven QCD
+%-------------------------------------
+\newpage
+\section{QCD Multijet Estimation}
+\label{s:secQCD}
+\input{Section/secQCD.tex}
+
+%-------------------------------------
+% Control plots after BTag and KinFit
+%-------------------------------------
+\newpage
+\section{Control Plots in Signal Region}
+\label{s:secCPlots}
+\input{Section/secCPlots.tex}
+
+%-------------------------------------
+% Reconstruction of Mjj
+%-------------------------------------
+\newpage
+\section{Mass Reconstruction}
+\label{s:secMassReco}
+\input{Section/secMassReco.tex}
+
+%-------------------------------------
+% Systematic Uncertainties
+%-------------------------------------
+\newpage
+\section{Systematic Uncertainties}
+\label{s:secSys}
+\input{Section/secSys.tex}
+
+%-------------------------------------
+% Event Categorization
+%-------------------------------------
+\newpage
+\section{Categorization of Events}
+\label{s:secMjjCat}
+\input{Section/secMjjCat.tex}
+
+%+++++++++++++++++++++++++++++++++++
+% Fit  diagnositics : maximum liklehood fit
+%+++++++++++++++++++++++++++++++++++
+\newpage
+\section{Post-fit Analysis from Charm Categories}
+\input{Section/secPostFit.tex}
+\label{s:secPostFit}
+
+%-------------------------------------
+% Goodness of Fit
+%-------------------------------------
+\newpage
+\section{Goodness of Fit}
+\label{s:secGOF}
+\input{Section/secGOF.tex}
+
+%-------------------------------------
+% Limit Computation
+%-------------------------------------
+\newpage
+\section{Exclusion Limits}
+\label{s:secLimit}
+\input{Section/secLimit.tex}
+
+%-------------------------------------
+% Conclusion
+%-------------------------------------
+\newpage
+\section{Conclusion}
+\label{s:secConcl}
+\input{Section/secConcl.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Begin text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\bibliography{auto_generated}   % will be created by the tdr script.
+
+\newpage
+\appendix
+
+%+++++++++++++++++++++++++++++++++++
+% Bkg from SM Higgs production
+%+++++++++++++++++++++++++++++++++++
+%/newpage
+\section{Background Contribution from SM Higgs Production Process}
+\input{Section/appendHiggsBkg.tex}
+\label{a:appendHiggsBkg}
+
+%+++++++++++++++++++++++++++++++++++
+% MadGraph vs Powheg
+%+++++++++++++++++++++++++++++++++++
+%/newpage
+\section{MadGraph vs POWHEG Sample}
+\input{Section/appendMGvsPG.tex}
+\label{a:appendMGvsPG}
+
+%+++++++++++++++++++++++++++++++++++
+% Cut optimization
+%+++++++++++++++++++++++++++++++++++
+%/newpage
+%\section{Cut Optimization for muon + jets Channel}
+%\input{Section/appendOpt.tex}
+%\label{a:appendOpt}
+
+%+++++++++++++++++++++++++++++++++++
+% b-jet pT binning
+%+++++++++++++++++++++++++++++++++++
+%/newpage
+\section{Event Categorization in Bins of b-jet pT}
+\input{Section/appendBjetPtCat.tex}
+\label{a:appendBjetPtCat}
+
+%+++++++++++++++++++++++++++++++++++
+% Control plots on low MET region
+%+++++++++++++++++++++++++++++++++++
+\section{Data, MC Comparison in Low MET Region}
+\input{Section/appendLowMET.tex}
+\label{a:appendLowMET}
+
+%+++++++++++++++++++++++++++++++++++
+% Effect of Sys on Mjj
+%+++++++++++++++++++++++++++++++++++
+\newpage
+\section{Effect of Systematics on dijet Distributions}
+\input{Section/appendSysMjj.tex}
+\label{a:appendSysMjj}
+
+%+++++++++++++++++++++++++++++++++++
+% Impact of nuisance parameters
+%+++++++++++++++++++++++++++++++++++
+\section{Impact of Uncertainties: Multi-dimensional Fit}
+\input{Section/secNuisImpact.tex}
+\label{s:secNuisImpact}
+
+\newpage
+%+++++++++++++++++++++++++++++++++++
+% Useful commands
+%+++++++++++++++++++++++++++++++++++
+\section{Useful Commands}
+\input{Section/appendCommand.tex}
+\label{a:appendCommand}
+
+%+++++++++++++++++++++++++++++++++++
+% deltaLNN vs NPs
+%+++++++++++++++++++++++++++++++++++
+\newpage
+\section{2 DeltaNLL vs NPs: Multi-dimensional Fit}
+\input{Section/appendScanNuis.tex}
+\label{a:appendScanNuis}
+%%
+%-------------------------------------
+% Changes in the AN
+%-------------------------------------
+\newpage
+\section{Revision history of the Analysis Note}
+\label{s:secChanges}
+\input{Section/secChanges.tex}

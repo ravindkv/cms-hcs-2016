@@ -1,0 +1,80 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {section}{\numberline {2}Search strategy at 13 TeV}{6}{section.2}
+\contentsline {section}{\numberline {3}Data and Simulated Samples}{10}{section.3}
+\contentsline {subsection}{\numberline {3.1}Data Samples}{10}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Simulated Samples}{10}{subsection.3.2}
+\contentsline {section}{\numberline {4}Physics Object Reconstruction and Selection}{15}{section.4}
+\contentsline {subsection}{\numberline {4.1}Primary Vertex and Diffuse Offset Energy Density}{15}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Primary Vertex}{15}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Diffuse Offset Energy Density}{16}{subsubsection.4.1.2}
+\contentsline {subsection}{\numberline {4.2}Muon}{16}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Reconstruction}{16}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Identification and Selection}{18}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Rochester correction}{18}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.4}Isolation}{18}{subsubsection.4.2.4}
+\contentsline {subsection}{\numberline {4.3}Electron }{20}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Reconstruction}{20}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Identification and Selection}{20}{subsubsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3}Isolation}{21}{subsubsection.4.3.3}
+\contentsline {subsubsection}{\numberline {4.3.4}Conversion rejection}{22}{subsubsection.4.3.4}
+\contentsline {subsection}{\numberline {4.4}Jet}{22}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {4.4.1}Reconstruction}{22}{subsubsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.2}Identification and Selection}{22}{subsubsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.3}Cleaning}{23}{subsubsection.4.4.3}
+\contentsline {subsection}{\numberline {4.5}Missing Transverse Energy}{23}{subsection.4.5}
+\contentsline {section}{\numberline {5}b-jet Tagging}{23}{section.5}
+\contentsline {subsection}{\numberline {5.1}Track Selection}{24}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Reconstruction of Secondary Vertex}{24}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Multi-layer Perceptron Training}{24}{subsection.5.3}
+\contentsline {section}{\numberline {6}Kinematic fit}{25}{section.6}
+\contentsline {subsection}{\numberline {6.1}Input to the TopKinFitter}{26}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Separation of jets}{28}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Kinematic constraints}{28}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Chi-square of the fit}{28}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Output of the KinFit}{29}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Selection and Performance}{29}{subsection.6.6}
+\contentsline {section}{\numberline {7}c-jet Tagging}{30}{section.7}
+\contentsline {section}{\numberline {8}Corrections on MC}{31}{section.8}
+\contentsline {subsection}{\numberline {8.1}Luminosity Scale Factors}{31}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Pileup Reweighting}{31}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Lepton Scale Factors}{33}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Jet and MET Correction}{33}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}b-tag Scale Factor}{37}{subsection.8.5}
+\contentsline {subsection}{\numberline {8.6}c-tag Scale Factor}{37}{subsection.8.6}
+\contentsline {section}{\numberline {9}Event Filters and Triggers}{38}{section.9}
+\contentsline {subsection}{\numberline {9.1}Filters}{38}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Triggers}{39}{subsection.9.2}
+\contentsline {section}{\numberline {10}Event Selection}{39}{section.10}
+\contentsline {section}{\numberline {11}QCD Multijet Estimation}{44}{section.11}
+\contentsline {subsection}{\numberline {11.1}Determination of transfer scale factor}{44}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Estimation of QCD multijet in the signal region}{48}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Comparison of data-driven QCD multijet shapes}{48}{subsection.11.3}
+\contentsline {section}{\numberline {12}Control Plots in Signal Region}{51}{section.12}
+\contentsline {section}{\numberline {13}Mass Reconstruction}{58}{section.13}
+\contentsline {section}{\numberline {14}Systematic Uncertainties}{60}{section.14}
+\contentsline {subsection}{\numberline {14.1}Experimental Uncertainties}{60}{subsection.14.1}
+\contentsline {subsection}{\numberline {14.2}Theoretical Uncertainties}{61}{subsection.14.2}
+\contentsline {section}{\numberline {15}Categorization of Events}{63}{section.15}
+\contentsline {subsection}{\numberline {15.1}Inclusive Event Category without charm-jet Tagging}{63}{subsection.15.1}
+\contentsline {subsection}{\numberline {15.2}Inclusive Event Category with Loose charm-jet Tagging}{63}{subsection.15.2}
+\contentsline {subsection}{\numberline {15.3}Exclusive Event Categories Based on charm-jet Tagging}{66}{subsection.15.3}
+\contentsline {section}{\numberline {16}Post-fit Analysis from Charm Categories}{73}{section.16}
+\contentsline {subsection}{\numberline {16.1}Profile of Nuisance Parameter: shape vs lnN}{73}{subsection.16.1}
+\contentsline {subsection}{\numberline {16.2}Distributions of Pulls}{75}{subsection.16.2}
+\contentsline {subsection}{\numberline {16.3}Post-fit Yields and Distributions}{75}{subsection.16.3}
+\contentsline {subsection}{\numberline {16.4}Corelation Among the Nuisance Parameters}{85}{subsection.16.4}
+\contentsline {section}{\numberline {17}Goodness of Fit}{87}{section.17}
+\contentsline {section}{\numberline {18}Exclusion Limits}{90}{section.18}
+\contentsline {subsection}{\numberline {18.1}Limits from inclusive event category without \text {c} tagging}{90}{subsection.18.1}
+\contentsline {subsection}{\numberline {18.2}Limits from inclusive event category with loose \text {c} tagging}{92}{subsection.18.2}
+\contentsline {subsection}{\numberline {18.3}Limits from exclusive event categories based on \text {c} tagging}{92}{subsection.18.3}
+\contentsline {section}{\numberline {19}Conclusion}{96}{section.19}
+\contentsline {section}{\numberline {A}Background Contribution from SM Higgs Production Process}{103}{appendix.A}
+\contentsline {section}{\numberline {B}MadGraph vs POWHEG Sample}{103}{appendix.B}
+\contentsline {section}{\numberline {C}Event Categorization in Bins of b-jet pT}{108}{appendix.C}
+\contentsline {section}{\numberline {D}Data, MC Comparison in Low MET Region}{108}{appendix.D}
+\contentsline {section}{\numberline {E}Effect of Systematics on dijet Distributions}{114}{appendix.E}
+\contentsline {section}{\numberline {F}Impact of Uncertainties: Multi-dimensional Fit}{114}{appendix.F}
+\contentsline {section}{\numberline {G}Useful Commands}{124}{appendix.G}
+\contentsline {section}{\numberline {H}2 DeltaNLL vs NPs: Multi-dimensional Fit}{126}{appendix.H}
+\contentsline {section}{\numberline {I}Revision history of the Analysis Note}{127}{appendix.I}

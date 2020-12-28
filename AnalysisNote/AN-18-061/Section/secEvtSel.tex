@@ -1,0 +1,140 @@
+
+In the final state, there are four jets, one charged lepton and \MET.
+Various selections cuts are applied to ensure the resulting events to have 
+this topology. Cut-flow plots after various selection cuts are shown in 
+Figure~\ref{fig:cutflow}. Below we list out various selection requirements applied.
+\begin{enumerate}
+\item{\bf{Event filter and trigger}}:
+    The events are passed to the filters and triggers, as discussed in 
+    Section (\ref{s:secFilters}). The lepton trigger is used to enrich events 
+    with lepton and significantly reduces QCD compared to other SM background.
+    The number of events surviving trigger cuts for signal, background MC and 
+    data are shown in the 2nd column of Tables~\ref{tab:cutflow_mu}, 
+    \ref{tab:cutflow_ele}, \ref{tab:cutflow_mu_sig} and \ref{tab:cutflow_ele_sig}. 
+\item {\bf{Lepton selection}}:
+The event topology has only one lepton thus events having a second loose lepton 
+are not selected. The lepton-veto selection for the \mujets and \ejets
+channel are listed in Tables~\ref{tab:muonSel} and \ref{tab:eleSel}.
+For the \mujets (\ejets) channel there cannot be any electron (muon) 
+in an event. Those events where there is any electron (muon) in the \mujets (\ejets) channel are rejected. Lepton scale factors as described in Sec.~\ref{s:lepton_sf} are applied to MC events. The relative isolation cut for 
+muon and electron is $I_{\rm rel}^{\mu} < 0.15$ and $I_{\rm rel}^{ele} < 0.08$, respectively. Event yields after one lepton selection are shown in the 3rd 
+column of Tables~\ref{tab:cutflow_mu}, \ref{tab:cutflow_ele}, 
+\ref{tab:cutflow_mu_sig} and \ref{tab:cutflow_ele_sig}.
+
+\item {\bf{Jet selection}}:
+There should be at least four jets in an event.
+Jet selection cuts are listed in Table~\ref{tab:jetSel}.
+The jet energy is corrected using JES and JER scale factors.
+After correcting jet energy, the selections on jet as shown in 
+Table~\ref{tab:jetSel} are applied. Number of events after jet selection are 
+shown in the 4th column of Tables~\ref{tab:cutflow_mu},
+\ref{tab:cutflow_ele}, \ref{tab:cutflow_mu_sig} and \ref{tab:cutflow_ele_sig}.
+
+\item {\bf{\MET selection}}:
+The \MET should be greater than 20 GeV. Event yields after \MET selection are 
+shown in the 5th column of Tables~\ref{tab:cutflow_mu},
+\ref{tab:cutflow_ele}, \ref{tab:cutflow_mu_sig} and \ref{tab:cutflow_ele_sig}.
+After applying \MET selection QCD, $Z/\gamma$+jets event yields reduce more compared to \ttbar+jets, single $t$, $W$+jets, and VV processes because 
+there is no genuine \MET (neutrino) at the parton level.
+
+\item {\bf{b-jet selection}}:
+For b-jet selection, the medium working point is used i.e, $b_{discr} > 0.8484$. 
+The b-tag event weights, as described in Sec.~\ref{s:bTagSF}, are applied on
+MC events. The events are required to have at least two b-jets.
+Event yields for MC signal, background and data are shown in the 6th column of Table~\ref{tab:cutflow_mu},
+\ref{tab:cutflow_ele}, \ref{tab:cutflow_mu_sig} and \ref{tab:cutflow_ele_sig}.
+
+\item {\bf{Kinematic fit selection}}:
+The kinematic fit does not converge for every event~\cite{DHondt:2006iej}.
+Only those events are selected for whom the fit converges.
+Also, the same cuts on kinematically fitted objects as that of reconstructed objects are used.
+The direction of kinematically fitted jets should be almost same to that of the reconstructed jets.
+The following kinematic fit selections are applied: 
+\begin{itemize}
+ \item the kinematic fit converges for selected events,
+ \item $\Delta R (KF_{\rm lep}, Reco_{\rm lep}) < 0.2$,
+ \item $\Delta R (KF_{\rm jets}, Reco_{\rm jets}) < 0.2$%, and
+% \item $\chi^2_{kfit} >0$, $Prob_{kfit} > 0$.
+\end{itemize}
+Event yields after kinematic fit selections are shown in the 7th column of Tables~\ref{tab:cutflow_mu},
+\ref{tab:cutflow_ele}, \ref{tab:cutflow_mu_sig} and \ref{tab:cutflow_ele_sig}.
+From these tables, we see that almost half the number of events is reduced after these selections.
+
+\item {\bf{c-jet selection}}:
+The loose charm tagging working point (pfCCvsL $> -0.48$ and pfCCvsB $> -0.17$) is used to tag a jet as c-jet.
+The c-tag event weights are applied following the same procedure as that for b-tag event weights.
+Event yield after demanding at least 1 c-jet with the loose working point for signal, background, and data are shown in 8th column of
+Tables~\ref{tab:cutflow_mu}, \ref{tab:cutflow_ele}, \ref{tab:cutflow_mu_sig} and \ref{tab:cutflow_ele_sig}.
+
+\end{enumerate}
+
+From Table~\ref{tab:cutflow_mu} (\ref{tab:cutflow_ele}) it can be seen that the $W + jets$ 
+process is the dominant background upto 1-lepton selection. However, when the events are required to have $N_{jets} \geq 4$, the \ttjets 
+becomes the dominant background. The \ttjets remains dominant background after
+subsequent selection cuts. The QCD events are from MC QCD samples as shown in 
+Table~\ref{tab:mcSample}.
+
+The signal event yields for a different mass of charged Higgs after 
+various selection cuts are shown in Table~\ref{tab:cutflow_mu_sig} (\ref{tab:cutflow_ele_sig}) 
+for the muon (electron) + jets channel. It can be seen from 
+Table~\ref{tab:cutflow_mu_sig} (\ref{tab:cutflow_ele_sig}) that the event yields are almost 
+same upto 1-lepton selections for all masses of charged Higgs. 
+However, after the $N_{jets} \geq 4$ selection, when \ttjets becomes the dominant 
+background as shown in Table~\ref{tab:cutflow_mu} (\ref{tab:cutflow_ele}), the event yield 
+for higher masses of the charged Higgs are reduced more compared to the lower masses. The 
+event yield reduces because of the less phase space available between top-quark and charged 
+Higgs for higher masses.
+    
+\begin{figure}
+\centering
+\subfigure[Event yields for the \mujets
+channel]{\includegraphics[width=0.50\linewidth]{Image/Muon/cutflow_mu.pdf}}
+\subfigure[Event yields the \ejets
+channel]{\includegraphics[width=0.50\linewidth]{Image/Electron/cutflow_ele.pdf}}
+\caption{ Event yields after various selection cuts for the \mujets and \ejets channel.} 
+\label{fig:cutflow}
+\end{figure}
+
+\begin{table}
+    \caption{Event yields after various selection cuts for the \mujets
+    channel. The $W + jets$ process is the dominant background upto 1-lepton 
+    selection. When the events are required to have $N_{jets} \geq 4$, the 
+    \ttjets becomes the dominant background. The QCD events are 
+    from MC QCD samples as listed in Table~\ref{tab:mcSample}. The MC signal
+process corresponds to $m_{H^+}=120$ GeV.}
+\label{tab:cutflow_mu}
+\centering
+\input{Table/Muon/cutflow_mu.tex}
+\end{table}
+
+\begin{table}
+    \caption{Event yields after various selection cuts for the \ejets
+    channel.A similar trend as that of Table~\ref{tab:cutflow_mu} is seen. The
+MC signal process corresponds to $m_{H^+}=120$ GeV.}
+\label{tab:cutflow_ele}
+\centering
+\input{Table/Electron/cutflow_ele.tex}
+\end{table}
+
+\begin{table} 
+    \caption{Signal event yields for the different mass of charged Higgs after 
+    various selection cuts for the \mujets channel. Event yields are almost
+    same upto 1-lepton selection for all mass points. However, after the 
+    $N_{jets} \geq 4$ selection (when \ttjets becomes the dominant
+    background as shown in Table~\ref{tab:cutflow_mu}) the event yield for higher
+    masses of the charged Higgs are reduced more compared to the lower masses. 
+    The event yield reduces because of the less phase space available between 
+    top-quark and charged Higgs for higher masses.}
+\label{tab:cutflow_mu_sig}
+\centering
+\input{Table/Muon/cutflow_mu_sig.tex}
+\end{table}
+
+\begin{table}
+    \caption{Signal event yields for different mass of charged Higgs after 
+        various selection cuts for the \ejets channel. Similar trend 
+        as that of Table~\ref{tab:cutflow_mu_sig} is seen.}
+\label{tab:cutflow_ele_sig}
+\centering
+\input{Table/Electron/cutflow_ele_sig.tex}
+\end{table}

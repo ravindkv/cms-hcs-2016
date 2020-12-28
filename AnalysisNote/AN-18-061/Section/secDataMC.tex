@@ -1,0 +1,169 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Data Samples}
+The reconstructed data is broadly divided into different event topologies. Only those 
+datasets matching with event topology under consideration are used for the analysis. 
+Such approach help in optimising the computing resources.
+The single muon and single electron data sample used for this analysis are shown in
+Table (\ref{tab:dataSample}). The data was collected in 2016 corresponding to Run number 
+273158 to 284044. To select good quality data, where most of the sub-detectors of the CMS 
+operates in a normal condition; the following lumi mask, as recommended by the PdMV group is applied:
+\verb|Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt|. The integrated luminosity
+after applying the mask reduces marginally from 37.0\fbinv to
+35.9\fbinv. The luminosity is calculated using the Command (\ref{cmd:lumiCalc}). 
+The global tag \verb|80X_dataRun2_2016SeptRepro_v7| is used to process the {\em MINIAOD}
+data in the \verb|CMSSW_8_0_28| for the production of the {\em ntuples}. The same version
+of the \verb|CMSSW| is used to produce {\em ntuples} for data, background, and signal samples.
+
+\begin{table}
+\centering
+    \caption{Muon and Electron data samples recorded in 2016 with an integrated luminosity 35.9
+    \fbinv. The re-reco campaign was used for Run B to Run G. For Run H, prompt reconstructions were used. 
+    The luminosity is calculated using {\bf{brilcalc}} tool. Where M = \/MINIAOD.} 
+\label{tab:dataSample}
+\input{Table/dataSample.tex}
+\end{table}
+
+\subsection{Simulated Samples}
+The centrally produced official simulated samples are used in this analysis. 
+Production of most of the samples (except 
+\verb|QCD_Pt-15to20_EMEnriched|) started with campaign 
+\verb|RunIISummer16MiniAODv2| and final reconstruction was done with 
+campaign \verb|PUMoriond17| using Global Tag \\ 
+\verb|80X_mcRun2_asymptotic_2016_TrancheIV_v6|. 
+The simulated samples used in this analysis are shown in Table (\ref{tab:mcSample}) 
+with corresponding cross-section and number of simulated events. 
+The k-factor is the ratio of cross-sections from next-to-leading-order 
+and leading-order, k$_\text{f} =\sigma_{\text{NLO}}/\sigma_{\text{LO}}$.
+
+The signal and background simulated samples are generated using \MGvATNLO~\cite{Alwall:2011uj, Alwall:2014hca}
+as well as \POWHEG~\cite{Frixione:2007vw, Nason:2004rx, Alioli:2010xd} generators at parton level. 
+These parton level events are hadronised using \PYTHIA~\cite{Sjostrand:2006za, Sjostrand:2007gs}. 
+The hadronised events were tuned using  CUETP8M1~\cite{CMS-PAS-TOP-16-021} which are then passed
+through \GEANTfour~\cite{Agostinelli:2002hh} for detector simulation. Finally, the events are
+reconstructed after complete detector simulation. In summary, the 
+following steps are followed to produce simulated samples for a single process:
+\begin{enumerate}
+    \item {\bf{GEN-SIM}}: 
+        \begin{itemize}
+            \item GEN: Physics process generation. 
+            \item SIM: Detector simulation.
+        \end{itemize}
+    \item {\bf{RECO}}: 
+        \begin{itemize}
+            \item DIGIPREMIX\_S2: \\
+                \verb|https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideSimulation|, 
+            \item DATAMIX: \\\verb|https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideSimulation|,
+            \item L1: L1 trigger emulation,
+            \item DIGI2RAW: Conversion of the digitised data format to raw data format, 
+            \item HLT: Applying high level trigger,
+            \item RAW2DIGI: Conversion of the raw data format to DIGI data format,
+            \item RECO: Reconstruction of physics object,
+            \item EI: High-level reconstruction step used in validation.
+        \end{itemize}
+    \item {\bf{MINIAOD}}: Re-reconstruction of physics object.
+\end{enumerate}
+
+The \ttjets channel is the most significant irreducible background for this analysis. It
+contributes around 94\% of the total backgrounds in the signal region. The parton level events 
+for \ttjets samples of Table~\ref{tab:mcSample} are generated using 
+\POWHEG~\cite{Frixione:2007vw, Nason:2004rx, Alioli:2010xd} at next-to-leading (NLO) order. The 
+\verb|NNPDF30_nlo_as_0118| ~\cite{Ball:2014uwa} parton distribution function (PDF) was used 
+for this purpose. The partonic events were then hadronised using 
+\PYTHIA~\cite{Sjostrand:2006za, Sjostrand:2007gs}. To simulate this channel at higher orders and 
+to take care of non-perturbative effects, \ttjets samples were tuned with 
+CUETP8M1~\cite{CMS-PAS-TOP-16-021}. The NNLO cross section for \ttjets process is estimated to be 
+$831.76 \pm^{20}_{29}(\text{scale}) \pm 35 (\text{PDF} + \alpha_s)$ pb \cite{Beneke:2011mq}. 
+
+Initially, the \ttjets sample was simulated using MadGraph generator (\\ 
+\verb|/TTJets_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/year+M|, where \verb|year| and \verb|M| 
+are defined in Table (\ref{tab:mcSample}). However, MadGraph-MLM sample was found to be 
+improperly modeled for high jet multiplicity due to which there was a surplus of 5\% (4\%) 
+simulated events w.r.t. observed data for muon (electron) + jets channel in the signal region as 
+shown in Figure~\ref{fig:MGvsPG}. In view of this, the POWHEG \ttjets sample is used in this analysis.
+Comparison of POWHEG and Madgraph \ttjets sample is described in Appendix~\ref{a:appendMGvsPG}.
+
+Single \PQt quark samples are shown in Table~\ref{tab:mcSample}, where a \PQt quark is produced with 
+jets in \PQt-channel (\verb|ST_t|), \PQs-channel (\verb|ST_s|), and \PQt\PW-channel (\verb|ST_tW|). The
+\verb|ST_tW| and \verb|ST_t| samples are produced using \POWHEG + \PYTHIA and CUETP8M1, where \verb|ST_tW| has 
+5-flavor scheme whereas \verb|ST_t|, has 4-flavor scheme and further, the \PQt quark decays 
+inclusively. The \verb|ST_s| are generated using \MGvATNLO~\cite{Alwall:2014hca} in the 4-flavor 
+scheme and was hadronised using \PYTHIA. The NLO cross section for single \PQt process 
+\cite{Aliev:2010zk, Kant:2014oha} are shown in Table~\ref{tab:mcSample}.
+
+The inclusive \wjets and \dyjets samples were generated using \MGvATNLO and are hadronised using 
+\PYTHIA. The MLM~\cite{ Alwall:2007fs} technique was used to take care of double counting. There
+are exclusive \PW + n jets and $\PZ/\PGg$ + n jets samples available for n = 1, 2, 3, 4. 
+The inclusive (\wjets and \dyjets) and exclusive ($\PW/\PZ/\PGg$ + n jets) samples have our event 
+topology \ie 4 jets + 1 lepton + \MET. Therefore, the inclusive and exclusive samples are added 
+appropriately to have more statistics. To avoid double counting, an 
+event weight based on luminosity and number of particles (NUP) 
+including incoming, intermediate, and outgoing at generator level is 
+applied to each sample. After that, the final event yields from each of
+them are added linearly. The event weight for NUP = 5, 6, 7, 8, and $\geq$9 is
+ $L_{data}/L_{\wjets}$, $L_{data}/(L_{\wjets} + L_{\PW + \text{1 jet}})$, 
+ $L_{data}/(L_{\wjets} + L_{\PW + \text{2 jet}})$, 
+ $L_{data}/(L_{\wjets} + L_{\PW + \text{3 jet}})$,
+ $L_{data}/(L_{\wjets} + L_{\PW + \text{4 jet}})$, respectively.
+ Where, for example, $L_{\wjets}$ is the generated luminosity (number 
+ of events divided by the cross section) of \wjets sample. A similar 
+ procedure is followed to add $\PZ/\PGg$ + n jets with \dyjets. However,
+ the NUP variable does not count the intermediate photon as the status
+ of photon is not displayed in the LHE event file. Hence it is
+ incremented by 1 when a \PZ boson is not the intermediate particle.
+ The NLO cross section for these processes are shown in Table~\ref{tab:mcSample}.
+
+The vector boson fusion process (WW, WZ, and ZZ) samples are generated and hadronised 
+using \PYTHIA and are tuned using CUETP8M1. The NLO cross section for these samples are shown 
+in Table~\ref{tab:mcSample}.
+
+The muon (electron) enriched QCD multijet samples are used for \mujets (\ejets) channel. These 
+samples are generated using \PYTHIA and CUETP8M1. After multiplying with filter efficiency, the 
+NLO cross sections are shown in Table~\ref{tab:mcSample}. From this table, it can be seen that the 
+luminosity for these samples are significantly 
+smaller as compared to the observed luminosity and therefore, a data-driven approach is used to 
+make more precise estimation of QCD multijet background.
+
+The charged Higgs signal samples were generated using \MGvATNLO, and hadronized using \PYTHIA. The 
+signal sample for several mass points in the range of 80 to 160 \GeV (80, 90, 100, 120, 140, 150, 
+155, 160) are generated for the search for charged Higgs. The cross section 
+for the signal is 831.76$\times$ 0.2132 pb, where 831.76 \unit{pb} is the inclusive 
+(fully-hadronic, fully-leptonic, semi-leptonic) \ttjets production cross section and factor 
+0.2132 is the branching fraction of $W^-\to l^- \bar{\nu_l}$ (where $l = \mu, e$, $\tau$ is not 
+considered in this analysis) \cite{Beringer:1900zz}. The factor 0.2132 is multiplied because \ttbar decays 
+semi-leptonically ($(t\to H^+ b, H^+\to c\bar{s}), (\bar{t}\to W^-\bar{b}, W^- \to l^-\bar{\nu_l})$), 
+where $l = \mu, e$ in the charged Higgs signal samples. Furthermore, the signal events are scaled by 
+the maximum observed upper limit obtained at 8 \TeV. The upper observed limit on \brThb is 6.5\% for
+the $m_{H+}$ = 90 \GeV\cite{Khachatryan:2015uua}. Therefore, the signal samples are scaled by a factor 
+$2\times 0.065\times (1-0.065) = 0.12155$ in every plot and table except in the data cards used for 
+limit computation. 
+\begin{table}
+\caption{Signal and background simulated samples. Where \\  
+\small{
+run = { \em RunIISummer16MiniAODv2-PUMoriond17\_80X\_mcRun2\_asymptotic\_2016\_TrancheIV\_v6}, \\
+run2= { \em RunIISpring16MiniAODv2-FlatPU8to37HcalNZSRAW\_withHLT\_80X\_mcRun2\_asymptotic\_v14-v1},\\
+M = /MINIAODSIM, yext1\_v2 = { \em run\_ext1-v2, yext1\_v1 = run\_ext1-v1},year = run-v1.
+}
+}
+\label{tab:mcSample}
+\centering
+\input{Table/mcSample.tex}
+\end{table}
+
+In the \ttjets samples, the NLO matrix element parton shower matching is varied by the damping 
+parameter ($h_\text{damp}$). Additional $\ttjets$ samples are generated by varying 
+$h_\text{damp}$ up and down and are used to observe the effect of $h_\text{damp}$. Similarly, 
+$\ttjets$ samples where the renormalization and factorisation scales have been varied up 
+and down are used to evaluate the uncertainties due to these scales. Also, alternate \ttjets 
+samples with \mt = 171.5 and 173.5\GeV are considered to observe the effect of mass of the \PQt quark. 
+All the additional \ttjets samples used for systematics study are shown in Table~\ref{tab:mcSampleSys}. 
+\begin{table}
+    \caption{ \ttjets  samples used for systematics study. Where
+M = \/MINIAODSIM, year = run-v1, \\
+run = { \em RunIISummer16MiniAODv2-PUMoriond17\_80X\_mcRun2\_asymptotic\_2016\_TrancheIV\_v6}. 
+}
+\label{tab:mcSampleSys}
+\centering
+\input{Table/mcSampleSys.tex}
+\end{table}
+

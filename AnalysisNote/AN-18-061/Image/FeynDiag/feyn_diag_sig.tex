@@ -1,0 +1,313 @@
+%\documentclass[]{revtex4-1}
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,tikz,caption,subcaption}
+\usepackage{tikz}
+\usepackage{multicol} 
+\usetikzlibrary{positioning,arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+
+\begin{document}
+
+% Define lines according to your own choice
+   \tikzset{
+particle1/.style={thin,draw=black, postaction={decorate},
+    decoration={markings,mark=at position .6 with {\arrow[black]{angle 45}}}},
+particle2/.style={thin,draw=black, postaction={decorate},
+    decoration={markings,mark=at position .6 with {\arrow[black]{triangle 45}}}},
+particle3/.style={dashed,draw=black, postaction={decorate},
+    decoration={markings,mark=at position .6 with {\arrow[black]{angle 45}}}},
+gluon/.style={decorate, draw=black,
+    decoration={coil,amplitude=4pt, segment length=5pt}}
+}
+ \tikzset{
+phot/.style={decorate, draw=black,
+    decoration={snake,amplitude=4pt, segment length=5pt}}    
+}
+
+
+\begin{figure*}[]
+%\centering
+\begin{multicols}{2}
+%--------------------------------------
+%            e3       e5
+% e1	     |_______/
+%	\________/a3  a5 \ e6
+%   /a1	   a2\_______/e7	
+% e2         |a4   a6\e8
+%            e4    
+%--------------------------------------
+\begin{subfigure}[b]{1.0\linewidth}
+% ============= gg fusion to Higgs ========================
+\begin{tikzpicture}[node distance=1cm and 1.5cm]
+\coordinate[label=left:$\bar{q}$] (e1);
+\coordinate[below right=1.00cm of e1] (aux1);
+\coordinate[below left=1.00cm of aux1,label=left:$q$] (e2);
+\coordinate[right=1.25cm of aux1] (aux2);
+
+\coordinate[above right=1.25cm of aux2] (aux3);
+\coordinate[below right=1.25cm of aux2] (aux4);
+
+\coordinate[above =1.00cm of aux3,label=above:$b$] (e3);
+\coordinate[right=1.25cm of aux3] (aux5);
+
+\coordinate[above right=1.0cm of aux5,label=right:$q^\prime$] (e5);
+\coordinate[below right=1.0cm of aux5,label=right:$\bar{q}$] (e6);
+
+\coordinate[right=1.25cm of aux4] (aux6);
+\coordinate[below =1.0cm of aux4,label=below:$\bar{b}$] (e4);
+\coordinate[above right=1.0cm of aux6,label=right:$\bar{\nu_l}$] (e7);
+\coordinate[below right=1.0cm of aux6,label=right:$l^-$] (e8);
+
+% Join all the points with preferred choice of lines
+\draw[particle1] (e1) -- (aux1);
+\draw[particle1] (aux1) -- (e2);
+\draw[gluon] (aux1) -- node[label=above:$g$]{} (aux2);
+\draw[particle1] (aux2) -- node[label=above:$t$]{} (aux3);
+\draw[phot] (aux3) -- node[label=below:$W^+$]{} (aux5);
+\draw[particle1] (aux3) -- (e3);
+\draw[particle1] (aux5) -- (e5);
+\draw[particle1] (e6) -- (aux5);
+
+\draw[particle1] (aux4) -- node[label=below:$\bar{t}$]{} (aux2);
+\draw[phot] (aux4) -- node[label=above:$W^-$]{}  (aux6);
+\draw[particle1] (e4) -- (aux4);
+\draw[particle1] (e7) -- (aux6);
+\draw[particle1] (aux6) -- (e8);
+\end{tikzpicture}
+\caption{{\bf{Background}}: s-channel quark-quark\\scattering.} \label{fig:gg}
+\end{subfigure}
+%\vspace{20pt}
+
+%\columnbreak
+\begin{subfigure}[b]{1.5\linewidth}
+% ============= gg fusion to Higgs ========================
+\begin{tikzpicture}[node distance=1cm and 1.5cm]
+\coordinate[label=left:$g$] (e1);
+\coordinate[below right=1.00cm of e1] (aux1);
+\coordinate[below left=1.00cm of aux1,label=left:$g$] (e2);
+\coordinate[right=1.25cm of aux1] (aux2);
+
+\coordinate[above right=1.25cm of aux2] (aux3);
+\coordinate[below right=1.25cm of aux2] (aux4);
+
+\coordinate[above =1.00cm of aux3,label=above:$b$] (e3);
+\coordinate[right=1.25cm of aux3] (aux5);
+
+\coordinate[above right=1.0cm of aux5,label=right:$q^\prime$] (e5);
+\coordinate[below right=1.0cm of aux5,label=right:$\bar{q}$] (e6);
+
+\coordinate[right=1.25cm of aux4] (aux6);
+\coordinate[below =1.0cm of aux4,label=below:$\bar{b}$] (e4);
+\coordinate[above right=1.0cm of aux6,label=right:$\bar{\nu_l}$] (e7);
+\coordinate[below right=1.0cm of aux6,label=right:$l^-$] (e8);
+
+% Join all the points with preferred choice of lines
+\draw[gluon] (e1) -- (aux1);
+\draw[gluon] (aux1) -- (e2);
+\draw[gluon] (aux1) -- node[label=above:$g$]{} (aux2);
+\draw[particle1] (aux2) -- node[label=above:$t$]{} (aux3);
+\draw[phot] (aux3) -- node[label=below:$W^+$]{} (aux5);
+\draw[particle1] (aux3) -- (e3);
+\draw[particle1] (aux5) -- (e5);
+\draw[particle1] (e6) -- (aux5);
+
+\draw[particle1] (aux4) -- node[label=below:$\bar{t}$]{} (aux2);
+\draw[phot] (aux4) -- node[label=above:$W^-$]{}  (aux6);
+\draw[particle1] (e4) -- (aux4);
+\draw[particle1] (e7) -- (aux6);
+\draw[particle1] (aux6) -- (e8);
+\end{tikzpicture}
+\caption{{\bf{Background}}: s-channel gluon-gluon\\scattering.}
+\label{fig:gg}
+\end{subfigure}
+
+%--------------------------------------
+%			  e5	
+%          a5/__e6
+% e1\ ______/    
+%    |a1  a3\ 
+%    |      e3
+%    |      e4
+%    |______/	 	
+%   / a2  a4\__e7
+% e2      a6 \            
+%            e8
+%--------------------------------------
+
+\begin{subfigure}[b]{1.5\linewidth}
+% ============= gg fusion to Higgs ========================
+\begin{tikzpicture}[node distance=1cm and 1.5cm]
+\coordinate[label=left:$g$] (e1);
+\coordinate[below right=1.00cm of e1] (aux1);
+\coordinate[below=2.00cm of aux1] (aux2);
+\coordinate[below left =1.00cm of aux2,label=left:$g$] (e2);
+
+\coordinate[right=1.25cm of aux1] (aux3);
+\coordinate[right=1.25cm of aux2] (aux4);
+
+\coordinate[above right=1.25cm of aux3] (aux5);
+\coordinate[below right =1.00cm of aux3,label=right:$b$] (e3);
+
+
+\coordinate[above =1.0cm of aux5,label=right:$q^\prime$] (e5);
+\coordinate[right=1.0cm of aux5,label=right:$\bar{q}$] (e6);
+
+\coordinate[above right =1.0cm of aux4,label=right:$\bar{b}$] (e4);
+\coordinate[below right=1.25cm of aux4] (aux6);
+\coordinate[right=1.0cm of aux6,label=right:$\bar{\nu_l}$] (e7);
+\coordinate[below right=1.0cm of aux6,label=right:$l^-$] (e8);
+
+% Join all the points with preferred choice of lines
+\draw[gluon] (e1) -- (aux1);
+\draw[gluon] (e2) -- (aux2);
+\draw[particle1] (aux1) -- node[label=above:$t$]{} (aux3);
+\draw[particle1] (aux1) -- node[label=left:$t$]{} (aux2);
+\draw[particle1] (aux4) -- node[label=above:$\bar{t}$]{} (aux2);
+\draw[phot] (aux3) -- node[label=below right:$W^+$]{} (aux5);
+\draw[particle1] (aux3) -- (e3);
+\draw[particle1] (aux5) -- (e5);
+\draw[particle1] (e6) -- (aux5);
+
+\draw[phot] (aux4) -- node[label=above right:$W^-$]{}  (aux6);
+\draw[particle1] (e4) -- (aux4);
+\draw[particle1] (e7) -- (aux6);
+\draw[particle1] (aux6) -- (e8);
+\end{tikzpicture}
+\caption{{\bf{Background}}: t-channel gluon-gluon\\scattering.}
+\label{fig:gg}
+\end{subfigure}
+%--------------------------------------
+
+\begin{subfigure}[b]{1.0\linewidth}
+% ============= gg fusion to Higgs ========================
+\begin{tikzpicture}[node distance=1cm and 1.5cm]
+\coordinate[label=left:$\bar{q}$] (e1);
+\coordinate[below right=1.00cm of e1] (aux1);
+\coordinate[below left=1.00cm of aux1,label=left:$q$] (e2);
+\coordinate[right=1.25cm of aux1] (aux2);
+
+\coordinate[above right=1.25cm of aux2] (aux3);
+\coordinate[below right=1.25cm of aux2] (aux4);
+
+\coordinate[above =1.00cm of aux3,label=above:$b$] (e3);
+\coordinate[right=1.25cm of aux3] (aux5);
+
+\coordinate[above right=1.0cm of aux5,label=right:$c$] (e5);
+\coordinate[below right=1.0cm of aux5,label=right:$\bar{s}$] (e6);
+
+\coordinate[right=1.25cm of aux4] (aux6);
+\coordinate[below =1.0cm of aux4,label=below:$\bar{b}$] (e4);
+\coordinate[above right=1.0cm of aux6,label=right:$\bar{\nu_l}$] (e7);
+\coordinate[below right=1.0cm of aux6,label=right:$l^-$] (e8);
+
+% Join all the points with preferred choice of lines
+\draw[particle1] (e1) -- (aux1);
+\draw[particle1] (aux1) -- (e2);
+\draw[gluon] (aux1) -- node[label=above:$g$]{} (aux2);
+\draw[particle1] (aux2) -- node[label=above:$t$]{} (aux3);
+\draw[particle3] (aux3) -- node[label=below:$H^+$]{} (aux5);
+\draw[particle1] (aux3) -- (e3);
+\draw[particle1] (aux5) -- (e5);
+\draw[particle1] (e6) -- (aux5);
+
+\draw[particle1] (aux4) -- node[label=below:$\bar{t}$]{} (aux2);
+\draw[phot] (aux4) -- node[label=above:$W^-$]{}  (aux6);
+\draw[particle1] (e4) -- (aux4);
+\draw[particle1] (e7) -- (aux6);
+\draw[particle1] (aux6) -- (e8);
+\end{tikzpicture}
+\caption{{\bf{Signal}}: s-channel quark-quark\\scattering.}
+\label{fig:gg}
+\end{subfigure}
+%\vspace{20pt}
+
+%\columnbreak
+\begin{subfigure}[b]{1.5\linewidth}
+% ============= gg fusion to Higgs ========================
+\begin{tikzpicture}[node distance=1cm and 1.5cm]
+\coordinate[label=left:$g$] (e1);
+\coordinate[below right=1.00cm of e1] (aux1);
+\coordinate[below left=1.00cm of aux1,label=left:$g$] (e2);
+\coordinate[right=1.25cm of aux1] (aux2);
+
+\coordinate[above right=1.25cm of aux2] (aux3);
+\coordinate[below right=1.25cm of aux2] (aux4);
+
+\coordinate[above =1.00cm of aux3,label=above:$b$] (e3);
+\coordinate[right=1.25cm of aux3] (aux5);
+
+\coordinate[above right=1.0cm of aux5,label=right:$c$] (e5);
+\coordinate[below right=1.0cm of aux5,label=right:$\bar{s}$] (e6);
+
+\coordinate[right=1.25cm of aux4] (aux6);
+\coordinate[below =1.0cm of aux4,label=below:$\bar{b}$] (e4);
+\coordinate[above right=1.0cm of aux6,label=right:$\bar{\nu_l}$] (e7);
+\coordinate[below right=1.0cm of aux6,label=right:$l^-$] (e8);
+
+% Join all the points with preferred choice of lines
+\draw[gluon] (e1) -- (aux1);
+\draw[gluon] (aux1) -- (e2);
+\draw[gluon] (aux1) -- node[label=above:$g$]{} (aux2);
+\draw[particle1] (aux2) -- node[label=above:$t$]{} (aux3);
+\draw[particle3] (aux3) -- node[label=below:$H^+$]{} (aux5);
+\draw[particle1] (aux3) -- (e3);
+\draw[particle1] (aux5) -- (e5);
+\draw[particle1] (e6) -- (aux5);
+
+\draw[particle1] (aux4) -- node[label=below:$\bar{t}$]{} (aux2);
+\draw[phot] (aux4) -- node[label=above:$W^-$]{}  (aux6);
+\draw[particle1] (e4) -- (aux4);
+\draw[particle1] (e7) -- (aux6);
+\draw[particle1] (aux6) -- (e8);
+\end{tikzpicture}
+\caption{{\bf{Signal}}: s-channel gluon-gluon\\scattering.}
+\label{fig:gg}
+\end{subfigure}
+
+
+\begin{subfigure}[b]{1.5\linewidth}
+% ============= gg fusion to Higgs ========================
+\begin{tikzpicture}[node distance=1cm and 1.5cm]
+\coordinate[label=left:$g$] (e1);
+\coordinate[below right=1.00cm of e1] (aux1);
+\coordinate[below=2.00cm of aux1] (aux2);
+\coordinate[below left =1.00cm of aux2,label=left:$g$] (e2);
+
+\coordinate[right=1.25cm of aux1] (aux3);
+\coordinate[right=1.25cm of aux2] (aux4);
+
+\coordinate[above right=1.25cm of aux3] (aux5);
+\coordinate[below right =1.00cm of aux3,label=right:$b$] (e3);
+
+
+\coordinate[above =1.0cm of aux5,label=right:$c$] (e5);
+\coordinate[right=1.0cm of aux5,label=right:$\bar{s}$] (e6);
+
+\coordinate[above right =1.0cm of aux4,label=right:$\bar{b}$] (e4);
+\coordinate[below right=1.25cm of aux4] (aux6);
+\coordinate[right=1.0cm of aux6,label=right:$\bar{\nu_l}$] (e7);
+\coordinate[below right=1.0cm of aux6,label=right:$l^-$] (e8);
+
+% Join all the points with preferred choice of lines
+\draw[gluon] (e1) -- (aux1);
+\draw[gluon] (e2) -- (aux2);
+\draw[particle1] (aux1) -- node[label=above:$t$]{} (aux3);
+\draw[particle1] (aux1) -- node[label=left:$t$]{} (aux2);
+\draw[particle1] (aux4) -- node[label=above:$\bar{t}$]{} (aux2);
+\draw[particle3] (aux3) -- node[label=below right:$H^+$]{} (aux5);
+\draw[particle1] (aux3) -- (e3);
+\draw[particle1] (aux5) -- (e5);
+\draw[particle1] (e6) -- (aux5);
+
+\draw[phot] (aux4) -- node[label=above right:$W^-$]{}  (aux6);
+\draw[particle1] (e4) -- (aux4);
+\draw[particle1] (e7) -- (aux6);
+\draw[particle1] (aux6) -- (e8);
+\end{tikzpicture}
+\caption{{\bf{Signal}}: t-channel gluon-gluon\\scattering.}
+\label{fig:gg}
+\end{subfigure}
+\end{multicols}
+\end{figure*}
+\end{document}

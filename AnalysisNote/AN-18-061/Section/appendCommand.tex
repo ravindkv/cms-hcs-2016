@@ -1,0 +1,95 @@
+\subsection*{Luminosity}
+ The luminosity is calculated using the following command
+\begin{align}
+\text{brilcalc  lumi  -b  "STABLE BEAMS" --normtag DATACERT.json} \nonumber \\  
+\text{-u  /fb -i processedLumis.json}
+\label{cmd:lumiCalc}
+\end{align}
+
+\subsection*{Pileup}
+The pileup distribution in the data is calculated using the following command 
+\begin{align}
+\text{pileupCalc.py -i JSONfile \texttt{--}inputLumiJSON pileup\_latest.txt  
+\texttt{--}calcMode true} \nonumber \\
+\text{\texttt{--}minBiasXsec 69200 \texttt{--}maxPileupBin 101 \texttt{--}numPileupBins 101  puHist.root}
+\label{cmd:pileupCalc}
+\end{align}
+where \verb|JSONfile| is the golden JSON file which contains good lumi section.
+
+\subsection*{Fit Diagnostics}
+The following commands are used for maximum likelihood fit inside the \textit{combine} tool
+\begin{subequations}
+\begin{align}
+\text{combine t2wDataCard.root -m 100 -M FitDiagnostics \texttt{--}expectSignal 1 \nonumber} \\
+	\text{\texttt{--}redefineSignalPOIs BR \texttt{--}setParameterRanges BR=0,0.10 \texttt{--}plots} \nonumber \\
+	\text{\texttt{--}saveShapes \texttt{--}saveWithUncertainties  \texttt{--}saveNormalizations} \nonumber \\
+	\text{\texttt{--}cminDefaultMinimizerStrategy 0}
+\end{align}    
+\begin{align}
+\text{python diffNuisances.py -a fitDiagnostics.root \texttt{--}poi=BR -g fitDiag.pdf}
+\end{align}
+\label{cmd:fitDiag}
+\end{subequations}
+
+\subsection*{Goodness of Fit}
+The following commands are used to compute the GOF
+\begin{subequations}
+\begin{align}
+\text{combine t2wDataCard.root -M GoodnessOfFit \texttt{--}algo saturated}
+\end{align}    
+\begin{align}
+\text{combine t2wDataCard.root -M GoodnessOfFit \texttt{--}algo saturated -t 1000 -s -1}
+\end{align}
+\label{cmd:GOF}
+\end{subequations}
+
+\subsection*{Impact of Parameters}
+Following commands are used to compute the impact of NPs
+\begin{subequations}
+\begin{align}
+\text{combineTool.py -M Impacts -d t2wDataCard.root -m 100 \texttt{--}doInitialFit} \nonumber \\
+\text{\texttt{--}robustFit 1 \texttt{--}redefineSignalPOIs BR \texttt{--}setParameterRanges BR=0,0.1}
+\nonumber \\
+\text{ \texttt{--}cminDefaultMinimizerStrategy 0}
+\end{align}    
+\begin{align}
+\text{combineTool.py -M Impacts -d t2wDataCard.root -m 100 \texttt{--}doFit} \nonumber \\
+\text{\texttt{--}robustFit 1 \texttt{--}redefineSignalPOIs BR \texttt{--}setParameterRanges BR=0,0.1}
+\nonumber \\ 
+\text{\texttt{--}cminDefaultMinimizerStrategy 0 \texttt{--}parallel 50}
+\end{align}
+\begin{align}
+\text{combineTool.py -M Impacts -d t2wDataCard.root -m 100 -o nuisImpactJSON}
+\end{align}
+\begin{align}
+\text{plotImpacts.py \texttt{--}cms-label " Internal" -i nuisImpactJSON -o nuisImpactPDF}
+\end{align}
+\label{cmd:impact}
+\end{subequations}
+
+\subsection*{Limit}
+Following commands are used to compute the limit
+\begin{subequations}
+\begin{align}
+\text{text2workspace.py  DATACARD.txt -o t2wDATACARD.root}
+\nonumber \\ 
+\text{-P HiggsAnalysis.CombinedLimit.ChargedHiggs:brChargedHiggs}
+\end{align}    
+
+\begin{align}
+\text{combine \texttt{--}rAbsAcc 0.000001 t2wDATACARD.root -M AsymptoticLimits}
+\end{align}
+\label{cmd:limit}
+\end{subequations}
+where \verb|DATACARD.txt| is the input data card file which contains the name 
+of the histogram for each process, and information about the statistical and
+systematics uncertainties.
+
+\subsection*{Scan Parameters}
+The $2\Delta NLL$ as a function of NPs is computed using the following command
+\begin{align}
+\text{combine -M MultiDimFit -d t2wDataCard.root -m 100 \texttt{--}redefineSignalPOIs BR} \nonumber \\
+\text{\texttt{--}setParameterRanges BR=0.0,0.10 -P nameNP \texttt{--}trackParameters BR} \nonumber \\ 
+\text{\texttt{--}algo=grid points 20 -n nameNP}
+\label{cmd:deltaNLL}
+\end{align}
